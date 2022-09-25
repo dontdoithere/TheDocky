@@ -1,5 +1,5 @@
 //Semen Dyakonov. N01391812
-//
+//Nissan Rayappu N01435235
 //
 //
 package ca.group6.it.thedocky.ui.slideshow;
