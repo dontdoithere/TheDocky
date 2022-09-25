@@ -1,5 +1,5 @@
 //Semen Dyakonov. N01391812
-//
+//Binay Garlapati. N01368870
 //
 //
 package ca.group6.it.thedocky.ui.gallery;
