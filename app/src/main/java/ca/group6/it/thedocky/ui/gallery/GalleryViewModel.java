@@ -1,3 +1,7 @@
+//Semen Dyakonov. N01391812
+//
+//
+//
 package ca.group6.it.thedocky.ui.gallery;
 
 import androidx.lifecycle.LiveData;

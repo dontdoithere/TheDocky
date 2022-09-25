@@ -1,3 +1,7 @@
+//Semen Dyakonov
+//
+//
+//
 package ca.group6.it.thedocky.ui.home;
 
 import android.os.Bundle;

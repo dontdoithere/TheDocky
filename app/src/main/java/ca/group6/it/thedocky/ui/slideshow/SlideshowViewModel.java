@@ -1,3 +1,7 @@
+//Semen Dyakonov.
+//
+//
+//
 package ca.group6.it.thedocky.ui.slideshow;
 
 import androidx.lifecycle.LiveData;
