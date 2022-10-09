@@ -14,7 +14,7 @@ public class PaymentViewModel extends ViewModel {
 
     public PaymentViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is payment fragment");
     }
 
     public LiveData<String> getText() {

@@ -9,10 +9,14 @@
         android:id="@+id/nav_home"
         android:name="ca.group6.it.thedocky.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_settingsFragment2"
+            app:destination="@id/Settings" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav"
+        android:id="@+id/nav_map"
         android:name="ca.group6.it.thedocky.ui.map.MapFragment"
         android:label="@string/menu_map"
         tools:layout="@layout/fragment_map" />
@@ -22,4 +26,12 @@
         android:name="ca.group6.it.thedocky.ui.payment.PaymentFragment"
         android:label="@string/menu_payment"
         tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/Settings"
+        android:name="ca.group6.it.thedocky.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment2_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>
