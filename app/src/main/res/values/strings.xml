@@ -23,7 +23,9 @@
 
     <!--Maps-->
     <!-- Header -->
-
+    <!--Home-->
+    <string name="home_username">Username:</string>
+    <string name="home_balance">Balance:</string>
 
     <string name="head_name">TheDocky</string>
     <!-- Preference Titles -->
