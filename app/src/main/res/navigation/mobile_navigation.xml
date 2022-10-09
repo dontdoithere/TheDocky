@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav"
         android:name="ca.group6.it.thedocky.ui.map.MapFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_map"
         tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_payment"
         android:name="ca.group6.it.thedocky.ui.payment.PaymentFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_payment"
         tools:layout="@layout/fragment_payment" />
 </navigation>

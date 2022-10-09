@@ -9,6 +9,7 @@ package ca.group6.it.thedocky.ui.settings;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.TextView;
+        import android.widget.Toolbar;
 
         import androidx.annotation.NonNull;
         import androidx.fragment.app.Fragment;
@@ -20,6 +21,8 @@ public class SettingsFragment extends Fragment {
 
     private FragmentSettingsBinding binding;
 
+    private Toolbar toolbar;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SettingsViewModel SettingsViewModel =
@@ -28,8 +31,8 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSettings;
-        SettingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+
         return root;
     }
 
