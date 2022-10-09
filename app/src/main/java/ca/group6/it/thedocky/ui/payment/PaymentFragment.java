@@ -2,7 +2,7 @@
 //Binay Garlapati. N01368870
 //Nissan Rayappu N01435235
 //
-package ca.group6.it.thedocky.ui.slideshow;
+package ca.group6.it.thedocky.ui.payment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,22 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import ca.group6.it.thedocky.databinding.FragmentSlideshowBinding;
+import ca.group6.it.thedocky.databinding.FragmentPaymentBinding;
 
-public class SlideshowFragment extends Fragment {
+public class PaymentFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentPaymentBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        PaymentViewModel paymentViewModel =
+                new ViewModelProvider(this).get(PaymentViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentPaymentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        paymentViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

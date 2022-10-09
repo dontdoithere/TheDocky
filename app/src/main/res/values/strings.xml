@@ -13,4 +13,15 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_settings">Settings</string>
+
+    <!--Login -->
+    <string name="log_username">username</string>
+    <string name="log_password">Password</string>
+    <string name="log_Button">LogIn</string>
+    <string name="reg_button">Register</string>
+    <!--Payment -->
+
+    <!--Maps-->
+    <!-- Header -->
+    <string name="head_name">TheDocky</string>
 </resources>

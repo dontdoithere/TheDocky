@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="ca.group6.it.thedocky.ui.gallery.GalleryFragment"
+        android:name="ca.group6.it.thedocky.ui.map.MapFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_map" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="ca.group6.it.thedocky.ui.slideshow.SlideshowFragment"
+        android:name="ca.group6.it.thedocky.ui.payment.PaymentFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_payment" />
 </navigation>

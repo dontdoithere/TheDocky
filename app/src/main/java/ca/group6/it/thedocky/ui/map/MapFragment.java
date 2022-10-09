@@ -2,7 +2,7 @@
 //Binay Garlapati. N01368870
 //Nissan Rayappu N01435235
 //
-package ca.group6.it.thedocky.ui.gallery;
+package ca.group6.it.thedocky.ui.map;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,18 +14,19 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import ca.group6.it.thedocky.databinding.FragmentGalleryBinding;
 
-public class GalleryFragment extends Fragment {
+import ca.group6.it.thedocky.databinding.FragmentMapBinding;
 
-    private FragmentGalleryBinding binding;
+public class MapFragment extends Fragment {
+
+    private FragmentMapBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        MapViewModel galleryViewModel =
+                new ViewModelProvider(this).get(MapViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textGallery;
