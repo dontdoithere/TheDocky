@@ -13,7 +13,13 @@
         android:theme="@style/Theme.TheDocky"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SplashScrActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TheDocky.NoActionBar">
