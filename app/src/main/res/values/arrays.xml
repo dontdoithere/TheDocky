@@ -3,10 +3,12 @@
     <string-array name="reply_entries">
         <item>Reply</item>
         <item>Reply to all</item>
+        <item>Reply to none</item>
     </string-array>
 
     <string-array name="reply_values">
         <item>reply</item>
         <item>reply_all</item>
+        <item>reply_none</item>
     </string-array>
 </resources>

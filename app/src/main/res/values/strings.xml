@@ -35,6 +35,11 @@
     <!--Menu 2-->
     <string name="help_menu">Help</string>
 
+    <!--Notification Preferences -->
+    <string name="notif_title">Notification</string>
+    <string name="set_volume">Volume</string>
+    <string name="dis_notif">Disable Notifications</string>
+
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
