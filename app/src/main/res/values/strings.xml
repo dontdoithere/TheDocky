@@ -19,6 +19,8 @@
     <string name="log_password">Password</string>
     <string name="log_Button">LogIn</string>
     <string name="reg_button">Register</string>
+    <string name="Card_No">CardNo</string>
+    <string name="submit">submit</string>
     <!--Payment -->
 
     <!--Maps-->
