@@ -32,7 +32,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#4CAF50" />
+                    android:background="#9864F3" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#673AB7" />
+                    android:background="#F1DE38" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#FF5722" />
+                    android:background="#23AEED" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -206,7 +206,7 @@
             app:layout_constraintTop_toBottomOf="@id/l"
             android:padding="10dp"
             android:text="Logout"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@android:color/darker_gray"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
