@@ -16,42 +16,77 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsFragment extends Fragment {
+import java.io.IOException;
 
-    private OnMapReadyCallback callback = new OnMapReadyCallback() {
+public class MapsFragment extends Fragment implements  OnMapReadyCallback  {
 
-        /**
-         * Manipulates the map once available.
-         * This callback is triggered when the map is ready to be used.
-         * This is where we can add markers or lines, add listeners or move the camera.
-         * In this case, we just add a marker near Sydney, Australia.
-         * If Google Play services is not installed on the device, the user will be prompted to
-         * install it inside the SupportMapFragment. This method will only be triggered once the
-         * user has installed Google Play services and returned to the app.
-         */
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
-            LatLng sydney = new LatLng(-34, 151);
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        }
-    };
+//    private OnMapReadyCallback callback = new OnMapReadyCallback() {
+//
+//
+//        @Override
+//        public void onMapReady(GoogleMap googleMap) {
+//            LatLng sydney = new LatLng(-34, 151);
+//            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+//            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+//        }
+//    };
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_map, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_map, container, false);
+
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.g_map);
+
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
+        }
+
+        return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        if (mapFragment != null) {
-            mapFragment.getMapAsync(callback);
-        }
+
     }
+
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+
+
+                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                LatLng latLng = new LatLng(36.778259, -119.417931);
+                MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("You are here");
+
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+                googleMap.getUiSettings().setZoomControlsEnabled(true);
+                googleMap.addMarker(markerOptions);
+
+
+
+        googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(@NonNull LatLng latLng) {
+
+                        MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("Want to got here?");
+
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+                        googleMap.getUiSettings().setZoomControlsEnabled(true);
+                        googleMap.addMarker(markerOptions);
+
+
+            }
+        });
+
+
+
+    }
+
 }
