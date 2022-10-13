@@ -25,12 +25,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_map"
-        android:name="ca.group6.it.thedocky.ui.map.MapFragment"
-        android:label="@string/menu_map"
-        tools:layout="@layout/fragment_map" />
-
-    <fragment
         android:id="@+id/nav_payment"
         android:name="ca.group6.it.thedocky.ui.payment.PaymentFragment"
         android:label="@string/menu_payment"
@@ -39,4 +33,14 @@
         android:id="@+id/nav_settings"
         android:name="ca.group6.it.thedocky.ui.settings.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="ca.group6.it.thedocky.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/mapsFragment2"
+        android:name="ca.group6.it.thedocky.MapsFragment2"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>
