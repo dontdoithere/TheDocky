@@ -58,32 +58,34 @@ public class MapsFragment extends Fragment implements  OnMapReadyCallback  {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+System.out.println("gggggggggggggggggggggggggggggg");
+try {
+    googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    LatLng latLng = new LatLng(36.778259, -119.417931);
+    MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("You are here");
+
+    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+    googleMap.getUiSettings().setZoomControlsEnabled(true);
+    googleMap.addMarker(markerOptions);
+
+    googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+        @Override
+        public void onMapLongClick(@NonNull LatLng latLng) {
+
+            MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("Want to got here?");
+
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+            googleMap.getUiSettings().setZoomControlsEnabled(true);
+            googleMap.addMarker(markerOptions);
 
 
+        }
+    });
 
-                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                LatLng latLng = new LatLng(36.778259, -119.417931);
-                MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("You are here");
+}catch (Exception e){
 
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-                googleMap.getUiSettings().setZoomControlsEnabled(true);
-                googleMap.addMarker(markerOptions);
+}
 
-
-
-        googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
-            @Override
-            public void onMapLongClick(@NonNull LatLng latLng) {
-
-                        MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("Want to got here?");
-
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-                        googleMap.getUiSettings().setZoomControlsEnabled(true);
-                        googleMap.addMarker(markerOptions);
-
-
-            }
-        });
 
 
 
