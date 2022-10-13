@@ -23,6 +23,12 @@
     <string name="Card_No">Enter Credit/Debit Card </string>
     <string name="submit">submit</string>
     <string name="enter">enter</string>
+    <string name="forgot_pass_title">Let\'s get your account back!</string>
+    <string name="forgot_pass_login">Forgot password</string>
+    <string name="log_description">This is smart bike lock system</string>
+
+    <!--SignUp-->
+    <string name="signup_descr">Let\'s get \nstarted</string>
     <!--Payment -->
 
     <!--Maps-->
