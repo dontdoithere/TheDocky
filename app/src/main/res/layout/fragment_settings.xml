@@ -32,7 +32,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#9864F3" />
+                    android:background="#4CAF50" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Allow app to access device location"
+                            android:text="Allow app to access device camera"
                             android:textColor="#5E5E5E"
                             android:textSize="13sp" />
 
@@ -91,7 +91,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#F1DE38" />
+                    android:background="#673AB7" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -122,7 +122,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Set application orientation"
+                            android:text="Change app orientation"
                             android:textColor="#5E5E5E"
                             android:textSize="13sp" />
 
@@ -151,7 +151,7 @@
                 <View
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
-                    android:background="#23AEED" />
+                    android:background="#FF5722" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="You Can Reset Your password"
+                            android:text="I want to change my password"
                             android:textColor="#5E5E5E"
                             android:textSize="13sp" />
 
@@ -206,7 +206,7 @@
             app:layout_constraintTop_toBottomOf="@id/l"
             android:padding="10dp"
             android:text="Logout"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_red_dark"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
