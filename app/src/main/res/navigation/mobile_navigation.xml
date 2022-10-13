@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/nav_map"
         android:name="ca.group6.it.thedocky.MapsFragment"
-        android:label="Map"
+        android:label="Maps"
         tools:layout="@layout/fragment_map" />
 
 </navigation>
