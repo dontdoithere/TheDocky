@@ -8,35 +8,20 @@
     tools:context=".SplashScrActivity">
 
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textViewSplashAppName"
+        android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="-6dp"
-        android:layout_marginBottom="124dp"
-        android:src="@drawable/giphy">
-
-    </pl.droidsonroids.gif.GifImageView>
-
-    <TextView
-        android:id="@+id/textViewSplashAppName"
-        android:layout_width="266dp"
-        android:layout_height="53dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="326dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="352dp"
-        android:fontFamily="@font/blazed"
-        android:text="TheDocky"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="395dp"
+        android:fontFamily="@font/origintech"
+        android:text="@string/app_name"
         android:textColor="@color/white"
         android:textSize="34dp" />
 

@@ -37,6 +37,7 @@
     <string name="home_username">Username:</string>
     <string name="home_balance">Balance:</string>
     <string name="switch_locker_state">Lock|Unlock</string>
+    <string name="loc_bike">Location:</string>
 
     <string name="head_name">TheDocky</string>
     <!-- Preference Titles -->

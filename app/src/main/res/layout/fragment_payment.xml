@@ -146,7 +146,7 @@
             android:id="@+id/view5"
             android:layout_width="412dp"
             android:layout_height="46dp"
-            android:background="@color/bar_bg"
+            android:background="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -154,7 +154,7 @@
             android:id="@+id/view6"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:background="@drawable/wave_green_up"
+            android:background="@drawable/wave_up"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view5" />
