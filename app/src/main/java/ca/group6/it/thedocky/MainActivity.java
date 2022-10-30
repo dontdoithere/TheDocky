@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    String emergencyCall = "5475148856";
 
 
     private final int PHONE_PERMISSION_CODE = 1;
@@ -42,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        setSupportActionBar(binding.appBarMain.toolbar);
+
+       setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkPhonePermissionAndCall();
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -78,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void makePhoneCall(String phoneNum){
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("Call " + phoneNum));
+        Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", emergencyCall, null));
+       // callIntent.setData(Uri.parse("Call " + phoneNum));
         startActivity(callIntent);
     }
 
@@ -89,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this,
                     new String[]{Manifest.permission.CALL_PHONE},PHONE_PERMISSION_CODE);
         } else {
-            makePhoneCall("+16475148856");
+            makePhoneCall(emergencyCall);
         }
     }
 
@@ -98,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PHONE_PERMISSION_CODE){
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                makePhoneCall("+16475148856");
+                makePhoneCall(emergencyCall);
             } else {
                 Toast.makeText(this, "Permission was denied", Toast.LENGTH_SHORT).show();
             }
