@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView forgotP = findViewById(R.id.forgot_password);
         ImageButton back = findViewById(R.id.navigate_up);
+        Button log_btn = findViewById(R.id.login_button);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
