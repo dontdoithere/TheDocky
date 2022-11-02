@@ -19,7 +19,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:src="@mipmap/ic_avatar"/>
+            android:src="@mipmap/ic_avatar_round"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:paddingStart="20dp"
         android:layout_gravity="center"
@@ -51,14 +51,47 @@
         android:textColor="@color/white"
         android:paddingEnd="20dp"/>
 
+       <LinearLayout
+           android:background="@color/purple_200"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginTop="40dp"
+           android:orientation="vertical"
+           android:padding="15dp">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
 
+              <ImageView
+                  android:layout_width="40dp"
+                  android:id="@+id/darkmodeicon"
+                  android:layout_height="40dp"
+                  android:src="@drawable/dark_mode_6682"
+                  android:background="@drawable/round_back_night_mode"
+                  android:padding="12dp"
+                  />
 
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_centerVertical="true"
+                  android:text="Night Mode"
+                  android:textColor="#FFFFFF"
+                  android:textStyle="bold"
+                  android:layout_toEndOf="@+id/darkmodeicon"/>
+              <Switch
 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:switchMinWidth="50dp"
+                  android:theme="@style/nightModeSwitch"/>
 
-
-
-
-
-</LinearLayout>
+          </RelativeLayout>
+        </LinearLayout>
+      </LinearLayout>
     </ScrollView>
 </LinearLayout>
