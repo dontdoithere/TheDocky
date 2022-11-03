@@ -1,5 +1,6 @@
 package ca.group6.it.thedocky;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,7 +12,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class SignUpActivity extends AppCompatActivity {
@@ -22,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText password;
     private TextInputEditText rePassword;
 
-
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         password  = findViewById(R.id.password_signup);
         rePassword = findViewById(R.id.confirm_password_signup);
 
+        auth = FirebaseAuth.getInstance();
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +70,7 @@ public class SignUpActivity extends AppCompatActivity {
                 else if (!txt_password.equals(txt_rePassword)){
                     Toast.makeText(SignUpActivity.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
                 } else {
+                    registerUser(txt_email, txt_password);
                     Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
@@ -72,7 +79,15 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    private void rigesterUser(String email, String password){
-
-    }
+    private void registerUser(String email, String password){
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    Toast.makeText(SignUpActivity.this, "Registering is successful!", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(SignUpActivity.this, "Regisration failed!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });   }
 }
