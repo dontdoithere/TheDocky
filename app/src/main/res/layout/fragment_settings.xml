@@ -81,17 +81,86 @@
                   android:textColor="#FFFFFF"
                   android:textStyle="bold"
                   android:layout_toEndOf="@+id/darkmodeicon"/>
-              <Switch
+              <androidx.appcompat.widget.SwitchCompat
 
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_centerVertical="true"
-                  android:switchMinWidth="50dp"
+                  android:switchMinWidth="60dp"
                   android:theme="@style/nightModeSwitch"/>
 
           </RelativeLayout>
-        </LinearLayout>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:id="@+id/notificationicon"
+                   android:layout_height="40dp"
+                   android:src="@drawable/ic_notification"
+                   android:background="@drawable/round_back_notifications"
+                   android:padding="12dp"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:text="Notifications"
+                   android:textColor="#FFFFFF"
+                   android:textStyle="bold"
+                   android:layout_toEndOf="@+id/notificationicon"/>
+               <androidx.appcompat.widget.SwitchCompat
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:switchMinWidth="50dp"
+                   android:theme="@style/notificationSwitch"/>
+
+           </RelativeLayout>
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:id="@+id/privateaccounticon"
+                   android:layout_height="40dp"
+                   android:src="@drawable/delete_user_icon"
+                   android:background="@drawable/round_back_private_account"
+                   android:padding="12dp"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_centerVertical="true"
+                   android:text="Delete Account"
+                   android:textColor="#FFFFFF"
+                   android:textStyle="bold"
+                   android:layout_toEndOf="@+id/privateaccounticon"/>
+               <androidx.appcompat.widget.SwitchCompat
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:switchMinWidth="50dp"
+                   android:theme="@style/privateaccountSwitch"/>
+
+           </RelativeLayout>
+
+
+
+
+       </LinearLayout>
       </LinearLayout>
     </ScrollView>
 </LinearLayout>
