@@ -13,12 +13,16 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+
 public class SignUpActivity extends AppCompatActivity {
+
     private Button signUp;
     private TextInputEditText username;
     private TextInputEditText email;
     private TextInputEditText password;
     private TextInputEditText rePassword;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,16 +61,18 @@ public class SignUpActivity extends AppCompatActivity {
                 else if (txt_password.length() < 6){
                     Toast.makeText(SignUpActivity.this, "Password should contain more then 6 symbols!", Toast.LENGTH_SHORT).show();
                 }
-                else if (txt_password != txt_rePassword){
+                else if (!txt_password.equals(txt_rePassword)){
                     Toast.makeText(SignUpActivity.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
                 } else {
-
-
                     Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
         });
+
+    }
+
+    private void rigesterUser(String email, String password){
 
     }
 }
