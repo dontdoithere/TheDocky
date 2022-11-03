@@ -18,6 +18,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -71,8 +73,6 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
                 } else {
                     registerUser(txt_email, txt_password);
-                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                    startActivity(intent);
                 }
             }
         });
@@ -84,9 +84,18 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    Toast.makeText(SignUpActivity.this, "Registering is successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Registration is successful!", Toast.LENGTH_SHORT).show();
+                    //wait 5 sec
+                    try {
+                        TimeUnit.SECONDS.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }else {
-                    Toast.makeText(SignUpActivity.this, "Regisration failed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
                 }
             }
         });   }
