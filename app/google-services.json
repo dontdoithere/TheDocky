@@ -1,6 +1,10 @@
 {
   "project_info": {
     "project_number": "733639353144",
+<<<<<<< HEAD
+=======
+    "firebase_url": "https://the-docky-default-rtdb.firebaseio.com",
+>>>>>>> origin/master
     "project_id": "the-docky",
     "storage_bucket": "the-docky.appspot.com"
   },
