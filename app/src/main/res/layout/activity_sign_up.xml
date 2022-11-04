@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@id/hi">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
+            android:id="@+id/name_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter full name"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@id/name_cover">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+            android:id="@+id/email_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter email address"
@@ -73,7 +73,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/password_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter password"
@@ -93,7 +93,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/confirm_password"
+            android:id="@+id/confirm_password_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Renter password"
@@ -110,7 +110,7 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="70dp"
         android:background="@drawable/welcome_background_button"
-        android:text="Sign up"
+        android:text="@string/signup_btn"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
