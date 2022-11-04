@@ -99,5 +99,6 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
                 }
             }
-        });   }
+        });
+    }
 }
