@@ -94,6 +94,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }else {
                     Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
                 }
