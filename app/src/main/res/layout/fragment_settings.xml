@@ -156,11 +156,115 @@
                    android:theme="@style/privateaccountSwitch"/>
 
            </RelativeLayout>
-
-
-
-
        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/purple_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mobile_rotate_rotation_icon"
+                    android:background="@drawable/round_back_night_mode"
+                    android:padding="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="177dp"
+                    android:text="Change orientation"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:switchMinWidth="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/b"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/messageusicon"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_message"
+                    android:background="@drawable/round_back_notifications"
+                    android:padding="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="Send Us Message"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/messageusicon"/>
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_arrow_right_24"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/faqicon"
+                    android:layout_height="40dp"
+                    android:src="@drawable/faq_icon"
+                    android:background="@drawable/round_back_private_account"
+                    android:padding="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="FAQ'S"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/faqicon"/>
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_arrow_right_24"/>
+
+            </RelativeLayout>
+        </LinearLayout>
       </LinearLayout>
     </ScrollView>
 </LinearLayout>

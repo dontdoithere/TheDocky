@@ -41,5 +41,11 @@
         <item name="android:foreground">#99FFFFFF</item>
     </style>
 
+    <style name="changeAppOrientationSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:foreground">#99FFFFFF</item>
+    </style>
+
 
 </resources>
