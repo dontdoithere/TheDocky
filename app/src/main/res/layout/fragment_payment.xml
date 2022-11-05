@@ -19,7 +19,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/i1"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome Back"
@@ -34,7 +34,7 @@
             android:textColor="#fff"
             android:fontFamily="sans-serif-black"
             android:letterSpacing="0.04"
-            android:layout_below="@+id/i1" />
+            android:layout_below="@+id/t1" />
 
         <ImageView
             android:layout_width="70dp"
@@ -214,12 +214,12 @@
             android:paddingLeft="15dp"
             android:paddingTop="15dp"
             android:paddingRight="15dp">
-            
+
             <ImageView
                 android:id="@+id/i1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@mipmap/bike"/>
+                android:src="@mipmap/bike1"/>
 
             <TextView
                 android:id="@+id/tt1"
@@ -247,7 +247,7 @@
                 android:layout_marginLeft="20dp"/>
 
 
-            
+
 
 
 
@@ -266,7 +266,7 @@
             android:id="@+id/i2"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@mipmap/bike"/>
+            android:src="@mipmap/bike1"/>
 
         <TextView
             android:id="@+id/tt2"
@@ -313,7 +313,7 @@
                 android:id="@+id/i3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@mipmap/bike"/>
+                android:src="@mipmap/bike1"/>
 
             <TextView
                 android:id="@+id/tt3"
@@ -360,7 +360,7 @@
                 android:id="@+id/i4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@mipmap/bike"/>
+                android:src="@mipmap/bike1"/>
 
             <TextView
                 android:id="@+id/tt4"
