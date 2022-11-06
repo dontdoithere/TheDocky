@@ -40,21 +40,21 @@
             android:value="AIzaSyBsDBDDB3vEvgtLBpB8-8W6DOVxMMKNvC8" />
 
         <activity
-            android:name=".SignUpActivity"
+            android:name=".ui.login.SignUpActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ForgetPasswordActivity"
+            android:name=".ui.login.ForgetPasswordActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

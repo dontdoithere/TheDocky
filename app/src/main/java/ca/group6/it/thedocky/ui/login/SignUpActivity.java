@@ -1,4 +1,4 @@
-package ca.group6.it.thedocky;
+package ca.group6.it.thedocky.ui.login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +18,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.concurrent.TimeUnit;
+
+import ca.group6.it.thedocky.MainActivity;
+import ca.group6.it.thedocky.R;
 
 
 public class SignUpActivity extends AppCompatActivity {

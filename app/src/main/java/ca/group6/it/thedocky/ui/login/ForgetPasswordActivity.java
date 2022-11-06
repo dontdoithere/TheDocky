@@ -1,10 +1,12 @@
-package ca.group6.it.thedocky;
+package ca.group6.it.thedocky.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import ca.group6.it.thedocky.R;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
 
