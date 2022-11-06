@@ -81,6 +81,7 @@
         android:paddingLeft="25dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_pay_id"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:cardElevation="10dp"
