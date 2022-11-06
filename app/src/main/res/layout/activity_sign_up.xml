@@ -37,7 +37,7 @@
             android:id="@+id/name_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter full name"
+            android:hint="@string/enter_name"
             android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -56,7 +56,7 @@
             android:id="@+id/email_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter email address"
+            android:hint="@string/enter_email"
             android:inputType="textWebEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,7 +76,7 @@
             android:id="@+id/password_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter password"
+            android:hint="@string/enter_pass"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -96,7 +96,7 @@
             android:id="@+id/confirm_password_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Renter password"
+            android:hint="@string/reenter_pass"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="70dp"
         android:background="@drawable/welcome_background_button"
         android:text="@string/signup_btn"
@@ -144,7 +144,7 @@
         android:padding="5dp"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:text="Already have an account?"
+        android:text="@string/have_account"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
