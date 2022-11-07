@@ -1,10 +1,12 @@
 package ca.group6.it.thedocky.ui.login;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,11 +19,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import ca.group6.it.thedocky.MainActivity;
 import ca.group6.it.thedocky.R;
@@ -129,12 +133,41 @@ public class LoginActivity extends AppCompatActivity {
 
     //Method for login
         private void loginUser(String email, String password){
-            auth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+
+        if(email.isEmpty()){
+            this.email.setError("Email is required!");
+            this.email.requestFocus();
+            return;
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            this.email.setError("Please enter valid email!");
+            this.email.requestFocus();
+            return;
+        }
+
+        if(password.isEmpty()){
+            this.password.setError("Password is required!");
+            this.password.requestFocus();
+            return;
+        }
+            auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
-                public void onSuccess(AuthResult authResult) {
-                    Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    finish();
+                public void onComplete(@NonNull Task<AuthResult> task) {
+
+                    if(task.isSuccessful()){
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                       // if (user.isEmailVerified()){
+                            startActivity(new Intent(LoginActivity.this,MainActivity.class ));
+                       // }else{
+                           // user.sendEmailVerification();
+                           // Toast.makeText(LoginActivity.this, "Check your email to verify your account!", Toast.LENGTH_SHORT).show();
+                       // }
+                    }else {
+
+                        Toast.makeText(LoginActivity.this, "Failed to login!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }
