@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 import ca.group6.it.thedocky.MainActivity;
 import ca.group6.it.thedocky.R;
+import ca.group6.it.thedocky.User;
 
 
 public class SignUpActivity extends AppCompatActivity {
