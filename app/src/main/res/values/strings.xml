@@ -40,7 +40,9 @@
     <string name="enter_name">Enter your name</string>
     <string name="reenter_pass">Reenter password</string>
     <string name="have_account">Already have an account?</string>
+
     <!--Payment -->
+    <string name="pay_now">Pay Now</string>
 
     <!--Maps-->
     <!-- Header -->

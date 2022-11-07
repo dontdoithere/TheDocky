@@ -11,6 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
         <!-- Customize your theme here. -->
     </style>
 
@@ -22,6 +23,8 @@
     <style name="Theme.TheDocky.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.TheDocky.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<!--    <style name="Cardtheme" parent="android.support.v7.appcompat.R.attr.colorPrimary"/>-->
 
 <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
     <item name="colorControlActivated">@color/night_mode</item>

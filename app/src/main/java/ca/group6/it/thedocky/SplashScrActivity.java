@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import ca.group6.it.thedocky.ui.login.SignUpActivity;
+
 public class SplashScrActivity extends AppCompatActivity {
 
     @Override
