@@ -10,43 +10,60 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="96dp"
         android:fontFamily="@font/aggresive"
         android:gravity="center_horizontal"
         android:text="Customer Feedback!"
         android:textColor="#000000"
         android:textSize="30dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="202dp"
-        android:src="@drawable/FiveStars" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/customerReviewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="Name" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/customerReviewPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
+        android:minHeight="48dp"
         tools:text="@tools:sample/us_phones" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/customerReviewEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/enter_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/customerTextbox"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:inputType="textMultiLine"
+            android:text="@string/customerTextbox" />
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
