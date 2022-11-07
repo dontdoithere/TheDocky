@@ -52,12 +52,14 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        logout = (Button) view.findViewById(R.id.logout_btn);
-        logout.setOnClickListener(new View.OnClickListener() {
+
+        binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), SplashScrActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 
