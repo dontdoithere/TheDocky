@@ -80,12 +80,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Method to make a call
     private void makePhoneCall(String phoneNum){
         Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", emergencyCall, null));
        // callIntent.setData(Uri.parse("Call " + phoneNum));
         startActivity(callIntent);
     }
 
+    //Method to check permission
     private void checkPhonePermissionAndCall(){
         if (ActivityCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Permission for make a call
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

@@ -62,7 +62,8 @@
            android:padding="15dp">
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:padding="10dp">
 
               <ImageView
                   android:layout_width="40dp"
@@ -77,6 +78,8 @@
                   android:layout_width="wrap_content"
                   android:layout_height="match_parent"
                   android:layout_centerVertical="true"
+                  android:paddingStart="10dp"
+
                   android:text="Night Mode"
                   android:textColor="#FFFFFF"
                   android:textStyle="bold"
@@ -94,7 +97,8 @@
 
            <RelativeLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:padding="10dp">
 
                <ImageView
                    android:layout_width="40dp"
@@ -109,6 +113,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="match_parent"
                    android:layout_centerVertical="true"
+                   android:paddingStart="10dp"
                    android:text="Notifications"
                    android:textColor="#FFFFFF"
                    android:textStyle="bold"
@@ -127,7 +132,8 @@
 
            <RelativeLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:padding="10dp">
 
                <ImageView
                    android:layout_width="40dp"
@@ -142,6 +148,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="match_parent"
                    android:layout_centerVertical="true"
+                   android:paddingStart="10dp"
                    android:text="Delete Account"
                    android:textColor="#FFFFFF"
                    android:textStyle="bold"
@@ -170,7 +177,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -184,10 +192,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="177dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="139dp"
                     android:text="Change orientation"
                     android:textColor="#FFFFFF"
-                    android:layout_centerVertical="true"
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -205,7 +213,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -219,6 +228,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:paddingStart="10dp"
                     android:layout_centerVertical="true"
                     android:text="Send Us Message"
                     android:textColor="#FFFFFF"
@@ -236,7 +246,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -251,6 +262,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
+                    android:paddingStart="10dp"
                     android:text="FAQ'S"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"

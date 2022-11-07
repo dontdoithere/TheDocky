@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Declare views
         forgotPass = findViewById(R.id.forgot_password);
         back_btn = findViewById(R.id.navigate_up);
         log_btn = findViewById(R.id.login_button);
@@ -76,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //Back button
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
+        //Button for forget password
         forgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivityForResult(signIntent, 1000);
         }
 
+        //Check if login successful
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -118,6 +121,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    //Method to move from Login activity to Main
     private void navigateToSecondActivity(){
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
     }
