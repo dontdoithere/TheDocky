@@ -13,25 +13,29 @@
         android:layout_height="96dp"
         android:fontFamily="@font/aggresive"
         android:gravity="center_horizontal"
-        android:text="Customer Feedback!"
+        android:text="@string/customer_feedback"
         android:textColor="#000000"
-        android:textSize="30dp" />
+        android:textSize="48sp" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0" />
+        android:layout_weight="0"
+        android:contentDescription="@string/fiveStarRatingBar"
+        android:numStars="5"
+        android:progressBackgroundTint="#FFE500" />
 
     <EditText
         android:id="@+id/customerReviewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name" />
+        android:text="@string/enter_name" />
 
     <EditText
         android:id="@+id/customerReviewPhone"
@@ -40,7 +44,8 @@
         android:ems="10"
         android:inputType="phone"
         android:minHeight="48dp"
-        tools:text="@tools:sample/us_phones" />
+        tools:text="@string/customerPhone"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/customerReviewEmailAddress"
@@ -49,21 +54,27 @@
         android:ems="10"
         android:hint="@string/enter_email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        android:autofillHints="" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/customerReviewTextboxv2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/customerReviewFeedbackBox"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:autofillHints="" />
 
-        <EditText
-            android:id="@+id/customerTextbox"
-            android:layout_width="match_parent"
-            android:layout_height="138dp"
-            android:layout_weight="1"
-            android:baselineAligned="false"
-            android:ems="10"
-            android:gravity="center|center_horizontal"
-            android:inputType="textMultiLine"
-            android:text="@string/customerTextbox" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/customerReviewFeedbackButton"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_message" />
+
 </LinearLayout>
