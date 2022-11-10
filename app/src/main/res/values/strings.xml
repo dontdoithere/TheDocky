@@ -57,6 +57,9 @@
 
     <!--Customer Review -->
     <string name="customerPhone">Enter Your Phone Number</string>
+    <string name="customerStars1">Very Dissatisfied</string>
+
+
 
     <string name="customerTextbox">Please Leave Your Feedback Here!</string>
 

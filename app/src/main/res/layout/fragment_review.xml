@@ -8,7 +8,7 @@
     tools:context=".ReviewFragment">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/customerReviewTitle"
         android:layout_width="match_parent"
         android:layout_height="96dp"
         android:fontFamily="@font/aggresive"
@@ -17,15 +17,22 @@
         android:textColor="#000000"
         android:textSize="48sp" />
 
+    <TextView
+        android:id="@+id/customerReviewFeeling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="TextView" />
+
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/rbStars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0"
         android:contentDescription="@string/fiveStarRatingBar"
         android:numStars="5"
-        android:progressBackgroundTint="#FFE500" />
+        android:progressBackgroundTint="#BCBCBC" />
 
     <EditText
         android:id="@+id/customerReviewName"
@@ -62,19 +69,21 @@
         android:id="@+id/customerReviewTextboxv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/customerReviewFeedbackBox"
         android:inputType="textMultiLine"
         android:lines="6"
-        android:autofillHints="" />
+        android:textColorHint="#757575" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/customerReviewButtonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/customerReviewFeedbackButton"
         android:minHeight="48dp"
-        android:src="@drawable/ic_message" />
+        android:src="@drawable/ic_message"
+        tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
 
 </LinearLayout>
