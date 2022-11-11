@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //Firebase db user data
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
-        userID = user.getUid();
+         userID = user.getUid();
 
         final TextView usernameTextView = (TextView) findViewById(R.id.username_value_home);
 

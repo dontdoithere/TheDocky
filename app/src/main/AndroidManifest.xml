@@ -46,6 +46,7 @@
         <activity
             android:name=".ui.login.SignUpActivity"
             android:exported="false" >
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -60,6 +61,7 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false" >
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -68,6 +70,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.TheDocky.NoActionBar" >
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
