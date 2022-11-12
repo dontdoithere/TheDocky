@@ -43,6 +43,8 @@
 
     <!--Payment -->
     <string name="pay_now">Pay Now</string>
+    <string name="bt_supported_card_types_description">Supported card types</string>
+
 
     <!--Maps-->
     <!-- Header -->
@@ -99,5 +101,6 @@
     <string name="customer_feedback">Customer Feedback!</string>
     <string name="fiveStarRatingBar">Leave Us A Star Rating</string>
     <string name="customerReviewFeedbackButton">Feedback Button</string>
+    <string name="form_username" />
 
 </resources>

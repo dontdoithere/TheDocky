@@ -24,13 +24,13 @@
 
     <style name="Theme.TheDocky.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-<!--    <style name="Cardtheme" parent="android.support.v7.appcompat.R.attr.colorPrimary"/>-->
+    <!--    <style name="Cardtheme" parent="android.support.v7.appcompat.R.attr.colorPrimary"/>-->
 
-<style name="nightModeSwitch" parent="Theme.AppCompat.Light">
-    <item name="colorControlActivated">@color/night_mode</item>
-    <item name="colorSwitchThumbNormal">#FFFFFF</item>
-    <item name="android:foreground">#99FFFFFF</item>
-</style>
+    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:foreground">#99FFFFFF</item>
+    </style>
 
     <style name="notificationSwitch" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">@color/night_mode</item>

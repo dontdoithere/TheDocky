@@ -13,12 +13,20 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.braintreepayments.cardform.OnCardFormSubmitListener;
+import com.braintreepayments.cardform.utils.CardType;
+import com.braintreepayments.cardform.view.AccessibleSupportedCardTypesView;
 import com.braintreepayments.cardform.view.CardForm;
 
 import ca.group6.it.thedocky.R;
 
 public class PaymentActivity extends AppCompatActivity {
     private static final String TAG = "PaymentActivity";
+
+    private static final CardType[] SUPPORTED_CARD_TYPES = { CardType.VISA, CardType.MASTERCARD, CardType.DISCOVER,
+            CardType.AMEX, CardType.DINERS_CLUB, CardType.JCB, CardType.MAESTRO, CardType.UNIONPAY,
+            CardType.HIPER, CardType.HIPERCARD };
+
+    private AccessibleSupportedCardTypesView mSupportedCardTypesView;
 
     CardForm cardForm;
 
@@ -30,6 +38,9 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+
+        mSupportedCardTypesView = findViewById(R.id.supported_card_types);
+        mSupportedCardTypesView.setSupportedCardTypes(SUPPORTED_CARD_TYPES);
 
         cardForm = (CardForm) findViewById(R.id.card_form);
         Button pay = findViewById(R.id.btnPay);

@@ -7,15 +7,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:theme="@style/Theme.AppCompat"
+    android:theme="@style/Theme.AppCompat.Light"
     android:background="@color/bg_map"
-    tools:context=".ui.payment.PaymentActivity">
+    tools:context=".ui.payment.PaymentActivity"
+    tools:ignore="ExtraText">
+
+
+  <com.braintreepayments.cardform.view.AccessibleSupportedCardTypesView
+      android:id="@+id/supported_card_types"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:paddingTop="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:contentDescription="@string/bt_supported_card_types_description"/>
 
   <com.braintreepayments.cardform.view.CardForm
       android:id="@+id/card_form"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
+      android:layout_height="wrap_content"
+      android:textColor="#FFBB86FC"/>
 
+  <com.braintreepayments.cardform.view.InitialValueCheckBox
+      android:id="@+id/bt_card_form_save_card_checkbox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/bt_save_card_checkbox_left_margin"
+      android:layout_marginLeft="@dimen/bt_save_card_checkbox_left_margin"
+      android:text="@string/bt_save_card_checkbox_name" />
 
   <Button
       android:id="@+id/btnPay"
@@ -29,14 +49,6 @@
       android:text="@string/pay_now"
       android:textColor="@android:color/white" />
 
-  <ImageView
-      android:layout_width="342dp"
-      android:layout_height="217dp"
-      android:layout_marginStart="30dp"
-      android:src="@mipmap/ic_payment_foreground"
-      app:layout_constraintStart_toStartOf="parent"
-      tools:layout_editor_absoluteY="481dp"
-      tools:ignore="ContentDescription" />
 
 
 </LinearLayout>
