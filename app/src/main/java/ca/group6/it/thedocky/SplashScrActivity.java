@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import ca.group6.it.thedocky.ui.login.LoginActivity;
 import ca.group6.it.thedocky.ui.login.SignUpActivity;
 
 public class SplashScrActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class SplashScrActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScrActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
