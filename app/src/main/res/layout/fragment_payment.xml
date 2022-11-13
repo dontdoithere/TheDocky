@@ -114,6 +114,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/transfer_id"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:cardElevation="10dp"
