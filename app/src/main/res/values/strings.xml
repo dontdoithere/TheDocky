@@ -98,6 +98,6 @@
     <string name="customerReviewFeedbackBox">Enter User Feedback.</string>
     <string name="customer_feedback">Customer Feedback!</string>
     <string name="fiveStarRatingBar">Leave Us A Star Rating</string>
-    <string name="customerReviewFeedbackButton">Feedback Button</string>
+    <string name="customerReviewFeedbackButton">Feedback</string>
 
 </resources>

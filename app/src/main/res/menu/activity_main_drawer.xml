@@ -21,5 +21,11 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
             android:title="@string/settings" />
+
+
+        <item android:id="@+id/nav_customerReview"
+                android:icon="@drawable/ic_menu_feedback"
+                android:title="@string/customerReviewFeedbackButton" />
+
     </group>
 </menu>
