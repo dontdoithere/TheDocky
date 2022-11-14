@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReviewFragment">
-
     <TextView
         android:id="@+id/customerReviewTitle"
         android:layout_width="match_parent"
@@ -16,13 +15,13 @@
         android:text="@string/customer_feedback"
         android:textColor="#000000"
         android:textSize="48sp" />
-
     <TextView
         android:id="@+id/customerReviewFeeling"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="TextView" />
+    />
 
     <RatingBar
         android:id="@+id/rbStars"
@@ -33,7 +32,6 @@
         android:contentDescription="@string/fiveStarRatingBar"
         android:numStars="5"
         android:progressBackgroundTint="#BCBCBC" />
-
     <EditText
         android:id="@+id/customerReviewName"
         android:layout_width="match_parent"
@@ -43,6 +41,8 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="@string/enter_name" />
+    android:hint="@string/enter_name"
+    tools:text=@string/enter_name />
 
     <EditText
         android:id="@+id/customerReviewPhone"
@@ -51,6 +51,7 @@
         android:ems="10"
         android:inputType="phone"
         android:minHeight="48dp"
+        android:hint="@string/customerPhone"
         tools:text="@string/customerPhone"
         android:autofillHints="" />
 
@@ -64,7 +65,6 @@
         android:minHeight="48dp"
         android:textColorHint="#757575"
         android:autofillHints="" />
-
     <EditText
         android:id="@+id/customerReviewTextboxv2"
         android:layout_width="match_parent"
@@ -76,7 +76,6 @@
         android:inputType="textMultiLine"
         android:lines="6"
         android:textColorHint="#757575" />
-
     <ImageButton
         android:id="@+id/customerReviewButtonSubmit"
         android:layout_width="match_parent"
@@ -85,5 +84,4 @@
         android:minHeight="48dp"
         android:src="@drawable/ic_message"
         tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
-
 </LinearLayout>

@@ -2,9 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
     <group android:checkableBehavior="single">
-
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_home"
@@ -21,11 +19,10 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
             android:title="@string/settings" />
-
-
-        <item android:id="@+id/nav_customerReview"
-                android:icon="@drawable/ic_menu_feedback"
-                android:title="@string/customerReviewFeedbackButton" />
+        <item
+            android:id="@+id/nav_review"
+            android:icon="@drawable/ic_message"
+            android:title="@string/Review" />
 
     </group>
 </menu>

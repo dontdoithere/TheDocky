@@ -7,7 +7,6 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <!--Menu Screen-->
     <string name="menu_home">Home</string>
     <string name="menu_map">Map</string>
@@ -15,7 +14,6 @@
     <string name="menu_login">Login</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_username">Username</string>
-
     <!--Login Screen-->
     <string name="log_username">username</string>
     <string name="log_password">Password</string>
@@ -30,19 +28,20 @@
     <string name="log_icons">LogIn with</string>
     <string name="enter_pass">Enter password</string>
     <string name="enter_email">Enter email address</string>
-
     <!--Forgot Password Screen-->
     <string name="send_email">Send Email</string>
-
     <!--SignUp screen-->
     <string name="signup_descr">Let\'s get \nstarted</string>
     <string name="signup_btn">Sign Up!</string>
     <string name="enter_name">Enter your name</string>
     <string name="reenter_pass">Reenter password</string>
     <string name="have_account">Already have an account?</string>
-
     <!--Payment -->
     <string name="pay_now">Pay Now</string>
+    <string name="bt_supported_card_types_description">Supported card types</string>
+
+    <!--Review -->
+    <string name="Review">Review</string>
 
     <!--Maps-->
     <!-- Header -->
@@ -52,9 +51,7 @@
     <string name="switch_locker_state">Lock|Unlock</string>
     <string name="loc_bike">Location:</string>
     <string name="home_descr">Here you can see location\n of lock systems from the maps and after you choose it click lock/unlock to put or take you bike from system</string>
-
     <string name="head_name">TheDocky</string>
-
     <!--Customer Review -->
     <string name="customerPhone">Enter Your Phone Number</string>
     <string name="customerStars1">Very Dissatisfied</string>
@@ -67,19 +64,15 @@
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
     <!--Menu 2-->
     <string name="help_menu">Help</string>
-
     <!--Notification Preferences -->
     <string name="notif_title">Notification</string>
     <string name="set_volume">Volume</string>
     <string name="dis_notif">Disable Notifications</string>
-
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
-
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -89,7 +82,6 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="login">Login</string>
     <string name="settings">Settings</string>
-
     <string name="editTextDate">Expiry on Card</string>
     <string name="textview">Postal Code</string>
     <string name="autocompletetextview">Enter Address</string>
@@ -98,6 +90,6 @@
     <string name="customerReviewFeedbackBox">Enter User Feedback.</string>
     <string name="customer_feedback">Customer Feedback!</string>
     <string name="fiveStarRatingBar">Leave Us A Star Rating</string>
-    <string name="customerReviewFeedbackButton">Feedback</string>
-
+    <string name="customerReviewFeedbackButton">Feedback Button</string>
+    <string name="form_username" />
 </resources>

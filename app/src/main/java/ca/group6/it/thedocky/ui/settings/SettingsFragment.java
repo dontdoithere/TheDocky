@@ -1,6 +1,3 @@
-//Semen Dyakonov. N01391812
-//Binay Garlapati. N01368870
-//Nissan Rayappu N01435235
 //
 package ca.group6.it.thedocky.ui.settings;
 
@@ -46,19 +43,13 @@ public class SettingsFragment extends Fragment {
 
     View view;
     private Button logout;
-
-
     private FragmentSettingsBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SettingsViewModel settingsViewModel =
                 new ViewModelProvider(this).get(SettingsViewModel.class);
-
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,32 +59,18 @@ public class SettingsFragment extends Fragment {
                 getActivity().finish();
             }
         });
-
-
-
         //Change orientation
         binding.b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
                 if (b) {
-
                     getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                     Toast.makeText(getActivity(), "LANDSCAPE MODE ON",Toast.LENGTH_SHORT).show();
-
-
                 } else {
-
                     getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     Toast.makeText(getActivity(), "PORTRAIT MODE ON",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
-
-
         return root;
-
-
     }}
-
