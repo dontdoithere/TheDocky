@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.CompoundButton;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ca.group6.it.thedocky.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -95,12 +97,31 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_map, R.id.nav_payment, R.id.nav_settings)
+                R.id.nav_home,R.id.nav_map, R.id.nav_payment, R.id.nav_settings, R.id.nav_review)
                 .setOpenableLayout(drawer)
                 .build();
+        navigationView.setNavigationItemSelectedListener(this);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+   /* @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_review:
+                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,
+                        new ReviewFragment()).commit();
+                break;
+
+        }
+
+        return true;
+    }*/
+
+    private void replaceFragment(Fragment fragment){
+
+
     }
 
     @Override
