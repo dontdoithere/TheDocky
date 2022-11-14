@@ -21,7 +21,7 @@ public class SplashScrActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScrActivity.this, MainActivity.class); //SignUpActivity
+                Intent intent = new Intent(SplashScrActivity.this, SignUpActivity.class); //SignUpActivity
                 startActivity(intent);
                 finish();
             }

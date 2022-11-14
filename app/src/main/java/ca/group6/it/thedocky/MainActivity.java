@@ -36,7 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ca.group6.it.thedocky.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.id.nav_home,R.id.nav_map, R.id.nav_payment, R.id.nav_settings, R.id.nav_review)
                 .setOpenableLayout(drawer)
                 .build();
-        navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setNavigationItemSelectedListener(this);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
@@ -119,10 +119,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }*/
 
-    private void replaceFragment(Fragment fragment){
 
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
