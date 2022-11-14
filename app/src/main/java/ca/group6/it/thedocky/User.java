@@ -2,7 +2,7 @@ package ca.group6.it.thedocky;
 
 public class User {
 
-    public String username, email;
+    public String username, email, review;
 
     public User(){
 
