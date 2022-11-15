@@ -78,12 +78,13 @@
         android:lines="6"
         android:textColorHint="#757575" />
 
-    <ImageButton
+    <Button
         android:id="@+id/customerReviewButtonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/customerReviewFeedbackButton"
         android:minHeight="48dp"
+        android:text="@string/submit"
         android:src="@drawable/ic_message"
         tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
 
