@@ -17,12 +17,7 @@
         android:textColor="#000000"
         android:textSize="48sp" />
 
-    <TextView
-        android:id="@+id/customerReviewFeeling"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-         />
+
 
     <TextView
         android:id="@+id/customerReviewStarRating"
@@ -48,8 +43,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="@string/enter_name"
-        tools:text="@string/enter_name" />
+        android:hint="@string/enter_name" />
 
     <EditText
         android:id="@+id/customerReviewPhone"
@@ -59,7 +53,6 @@
         android:inputType="phone"
         android:minHeight="48dp"
         android:hint="@string/customerPhone"
-        tools:text="@string/customerPhone"
         android:autofillHints="" />
 
     <EditText
