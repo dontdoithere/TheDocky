@@ -36,7 +36,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ca.group6.it.thedocky.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -100,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_home,R.id.nav_map, R.id.nav_payment, R.id.nav_settings, R.id.nav_review)
                 .setOpenableLayout(drawer)
                 .build();
-        //navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-   /* @Override
+   @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_review:
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
-    }*/
+    }
 
 
 
@@ -139,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
     //Method to make a call
     private void makePhoneCall(String phoneNum){
         Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", emergencyCall, null));
-       // callIntent.setData(Uri.parse("Call " + phoneNum));
         startActivity(callIntent);
     }
 

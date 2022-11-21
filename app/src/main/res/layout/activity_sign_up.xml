@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_test1"
     tools:context=".ui.login.SignUpActivity">
 
 
@@ -15,6 +16,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         android:gravity="center"
+        android:fontFamily="@font/origintech"
         android:text="@string/signup_descr"
         android:textColor="@color/black"
         android:textSize="35sp"
