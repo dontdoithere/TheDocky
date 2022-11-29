@@ -39,7 +39,7 @@
     <string name="signup_btn">Sign Up!</string>
     <string name="enter_name">Enter your name</string>
     <string name="reenter_pass">Reenter password</string>
-    <string name="have_account">Don\'t have an account? SIGNUP</string>
+    <string name="have_account">Don\'t have an account? SIGN UP</string>
 
     <!--Payment -->
     <string name="pay_now">Pay Now</string>

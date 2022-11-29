@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText username;
     private TextInputEditText email;
     private TextInputEditText password;
+    private ImageButton back_btn;
     private TextInputEditText rePassword;
 
     private FirebaseAuth auth;
@@ -49,12 +51,26 @@ public class SignUpActivity extends AppCompatActivity {
         email = findViewById(R.id.email_signup);
         password  = findViewById(R.id.password_signup);
         rePassword = findViewById(R.id.confirm_password_signup);
+        back_btn = findViewById(R.id.navigate_up);
 
         //Declare database
         auth = FirebaseAuth.getInstance();
 
+
+
         //When you click register button
+        ImageButton back = findViewById(R.id.navigate_up);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
         signUp.setOnClickListener(new View.OnClickListener() {
+            ImageButton back = findViewById(R.id.navigate_up);
             @Override
             public void onClick(View view) {
                 String txt_email = email.getText().toString().trim();

@@ -10,6 +10,7 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.braintreepayments.cardform.OnCardFormSubmitListener;
@@ -27,6 +28,7 @@ public class PaymentActivity extends AppCompatActivity {
             CardType.HIPER, CardType.HIPERCARD };
 
     private AccessibleSupportedCardTypesView mSupportedCardTypesView;
+    private ImageButton back_btn;
 
     CardForm cardForm;
 
@@ -44,6 +46,7 @@ public class PaymentActivity extends AppCompatActivity {
 
         cardForm = (CardForm) findViewById(R.id.card_form);
         Button pay = findViewById(R.id.btnPay);
+        back_btn = findViewById(R.id.navigate_up);
 
         View pay_t = findViewById(btnPay);
         cardForm.cardRequired(true)
@@ -99,6 +102,12 @@ public class PaymentActivity extends AppCompatActivity {
                 }
             }
 
+        });
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
         });
 
         cardForm.setOnCardFormSubmitListener(new OnCardFormSubmitListener() {

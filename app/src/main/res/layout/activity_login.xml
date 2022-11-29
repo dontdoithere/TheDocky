@@ -7,12 +7,13 @@
     android:background="@color/bg_test1"
     tools:context=".ui.login.LoginActivity">
 
+
     <ImageButton
         android:id="@+id/navigate_up"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:background="?android:selectableItemBackgroundBorderless"
         android:padding="10dp"
         android:scaleType="centerInside"
@@ -20,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/black" />
-
 
     <TextView
         android:id="@+id/hi"
@@ -34,6 +34,7 @@
         android:textColor="@color/black"
         android:textSize="39sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/navigate_up" />
 
@@ -158,8 +159,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hi_text"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.142" />
 
     <LinearLayout
         android:layout_width="185dp"
