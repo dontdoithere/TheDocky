@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--suppress ALL -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.payment.PaymentFragment"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -47,10 +55,10 @@
     <LinearLayout
         android:layout_width="385dp"
         android:layout_height="200dp"
-        android:orientation="vertical"
-        android:background="@drawable/card_view"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,6 +68,7 @@
             android:text="Total Balance"
             android:textColor="#fff"
             android:textSize="25dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -302,7 +311,6 @@
 
 
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/r3"
             android:layout_width="match_parent"
@@ -356,47 +364,43 @@
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
             android:paddingTop="15dp"
-            android:paddingRight="15dp"
-            android:layout_below="@id/r3"    >
+            android:paddingRight="15dp">
 
             <ImageView
                 android:id="@+id/i4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@mipmap/bike1"/>
+                android:src="@mipmap/bike1" />
 
             <TextView
                 android:id="@+id/tt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Brampton"
+                android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/i4"
                 android:fontFamily="sans-serif-black"
-                android:textSize="25dp"
-                android:textStyle="bold"
+                android:letterSpacing="0.03"
                 android:textColor="#516b9e"
-                android:layout_marginLeft="20dp"
-                android:letterSpacing="0.03"/>
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 Oct - 3:22PM"
-                android:layout_toRightOf="@id/i4"
                 android:layout_below="@+id/tt4"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/i4"
                 android:fontFamily="sans-serif-black"
-                android:textSize="16dp"
-                android:textStyle="bold"
+                android:text="23 Oct - 3:22PM"
                 android:textColor="#516b9e"
-                android:layout_marginLeft="20dp"/>
-
-
-
-
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
 
-
     </RelativeLayout>
-</LinearLayout>
+
+</LinearLayout></ScrollView>
+
+
