@@ -14,11 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import ca.group6.it.thedocky.R;
+import ca.group6.it.thedocky.User;
 import ca.group6.it.thedocky.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private DatabaseReference reference;
+    private FirebaseUser user;
+
+    private String userID;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +42,11 @@ public class HomeFragment extends Fragment {
 
         return root;
     }
+
+    //Firebase db user data
+
+
+
 
     @Override
     public void onDestroyView() {
