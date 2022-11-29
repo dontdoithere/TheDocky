@@ -50,6 +50,18 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView or = findViewById(R.id.or);
+
+        //To go back to login page
+        or.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         //Declare views
         forgotPass = findViewById(R.id.forgot_password);

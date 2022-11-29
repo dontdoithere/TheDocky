@@ -41,18 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        TextView or = findViewById(R.id.or);
 
-        //To go back to login page
-        or.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
         //Initialize views
         signUp = findViewById(R.id.sign_up_button);

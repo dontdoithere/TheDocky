@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/black" />
 
+
     <TextView
         android:id="@+id/hi"
         android:layout_width="match_parent"
@@ -136,12 +137,29 @@
         android:id="@+id/view4"
         android:layout_width="411dp"
         android:layout_height="75dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/wave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/have_account"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hi_text"
+        app:layout_constraintVertical_bias="0.796" />
 
     <LinearLayout
         android:layout_width="185dp"
