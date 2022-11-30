@@ -1,6 +1,8 @@
 package ca.group6.it.thedocky;
 
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.pressBack;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.PositionAssertions.isCompletelyBelow;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -32,5 +34,16 @@ public class EspressoTest {
         onView(withText("Forgot password")).check(isCompletelyBelow(withId(R.id.password_login)));
 
     }
+@Test
+    public void resetpasswordIsOpenedWhenClickedForgotPassword(){
+        onView(withId(R.id.forgot_password)).perform(click());
+        onView(withId(R.id.activity_forget_password_parent)).check(matches(isDisplayed()));
+
+        pressBack();
+        onView(withId(R.id.activity_login_parent)).check(matches(isDisplayed()));
 }
+}
+
+
+
 
