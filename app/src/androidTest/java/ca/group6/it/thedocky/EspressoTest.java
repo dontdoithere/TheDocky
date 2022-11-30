@@ -49,6 +49,15 @@ public class EspressoTest {
 
     }
 
+    @Test
+    public void signupIsOpenedWhenClickedSignup(){
+        onView(withId(R.id.or)).perform(click());
+        onView(withId(R.id.signup_parent)).check(matches(isDisplayed()));
+
+        pressBack();
+        onView(withId(R.id.activity_login_parent)).check(matches(isDisplayed()));
+    }
+
 }
 
 
