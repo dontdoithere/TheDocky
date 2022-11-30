@@ -42,6 +42,13 @@ public class EspressoTest {
         pressBack();
         onView(withId(R.id.activity_login_parent)).check(matches(isDisplayed()));
 }
+    @Test
+    public void signupIsDisplayedBelowlogin() {
+        onView(withId(R.id.or)).check(matches(isDisplayed()));
+        onView(withId(R.id.or)).check(isCompletelyBelow(withId(R.id.login_button)));
+
+    }
+
 }
 
 
