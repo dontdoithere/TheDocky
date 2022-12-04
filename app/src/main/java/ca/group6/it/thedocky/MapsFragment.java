@@ -107,7 +107,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        System.out.println("gggggggggggggggggggggggggggggg");
         try {
             googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             LatLng latLng = new LatLng(latitude, longitude);

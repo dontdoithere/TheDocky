@@ -36,7 +36,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import ca.group6.it.thedocky.adapter.ReviewAdapter;
+import ca.group6.it.thedocky.ui.adapter.ReviewAdapter;
 import ca.group6.it.thedocky.databinding.FragmentReviewBinding;
 
 

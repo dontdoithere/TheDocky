@@ -1,4 +1,4 @@
-package ca.group6.it.thedocky.adapter;
+package ca.group6.it.thedocky.ui.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
