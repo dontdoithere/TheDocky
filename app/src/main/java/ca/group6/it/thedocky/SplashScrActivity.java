@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import ca.group6.it.thedocky.ui.login.LoginActivity;
 import ca.group6.it.thedocky.ui.login.SignUpActivity;
 
@@ -18,12 +21,21 @@ public class SplashScrActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_scr);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (firebaseUser == null){
+
                 Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class); //SignUpActivity
                 startActivity(intent);
-                finish();
+                finish();}else {
+                    Intent intent = new Intent(SplashScrActivity.this, MainActivity.class); //SignUpActivity
+                    startActivity(intent);
+                    finish();
+                }
+
             }
         },3000);
 

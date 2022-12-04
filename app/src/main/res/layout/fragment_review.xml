@@ -1,104 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_test1"
+    android:background="@color/white"
     tools:context=".ReviewFragment">
 
-    <TextView
-        android:id="@+id/customerReviewTitle"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/aggresive"
-        android:gravity="center_horizontal"
-        android:text="@string/customer_feedback"
-        android:textColor="#000000"
-        android:textSize="48sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/review"
+        app:layout_constraintBottom_toTopOf="@+id/send_re"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/review_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+    </androidx.recyclerview.widget.RecyclerView>
 
-    <EditText
-        android:id="@+id/customerReviewName"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/textview_style"
-        android:paddingStart="24dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/enter_name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/customerReviewPhone"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginStart="10dp"
-        android:paddingStart="24dp"
-        android:autofillHints=""
-        android:background="@drawable/textview_style"
-        android:ems="10"
-        android:hint="@string/customerPhone"
-        android:inputType="phone"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/customerReviewEmailAddress"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="10dp"
-        android:paddingStart="24dp"
-        android:background="@drawable/textview_style"
-        android:hint="@string/enter_email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/customerReviewTextboxv2"
+    <RelativeLayout
+        android:id="@+id/send_re"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/textview_style"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/customerReviewFeedbackBox"
-        android:inputType="textMultiLine"
-        android:lines="6"
-        android:paddingStart="34dp"
-        android:textColorHint="#757575" />
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <RatingBar
-        android:id="@+id/rbStars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0"
-        android:contentDescription="@string/fiveStarRatingBar"
-        android:numStars="5"
-        android:progressBackgroundTint="#BCBCBC" />
+        <ProgressBar
+            android:id="@+id/is_post_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:visibility="gone" />
 
-    <Button
-        android:id="@+id/customerReviewButtonSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:contentDescription="@string/customerReviewFeedbackButton"
-        android:minHeight="48dp"
-        android:src="@drawable/ic_message"
-        android:text="@string/submit"
-        tools:ignore="RedundantDescriptionCheck,ImageContrastCheck" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_send"
+            app:fabSize="mini"
+            app:maxImageSize="15dp"
+            app:tint="@color/white" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/comment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@id/send_review"
+            android:layout_toEndOf="@id/add_rating"
+            android:background="@drawable/edit_text_background_discover"
+            android:hint="Write a review"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxHeight="100dp"
+            android:padding="10dp"
+            android:text=""
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/add_rating"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/comment_text"
+            android:layout_alignParentStart="true"
+            android:background="?android:selectableItemBackground"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/add"
+            app:tint="@color/gray" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

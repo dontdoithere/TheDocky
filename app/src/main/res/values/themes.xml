@@ -14,7 +14,10 @@
 
         <!-- Customize your theme here. -->
     </style>
-
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#eee</item>
+        <item name="colorControlActivated">@color/purple_200</item>
+    </style>
     <style name="Theme.TheDocky.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -62,12 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
        setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checkPhonePermissionAndCall();
-            }
-        });
+
 
         //Firebase db user data
         user = FirebaseAuth.getInstance().getCurrentUser();
