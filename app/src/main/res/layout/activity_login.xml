@@ -2,42 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_test1"
-    tools:context=".ui.login.LoginActivity"
-    android:id="@+id/activity_login_parent">
-
-
-    <ImageButton
-        android:id="@+id/navigate_up"
-        android:layout_width="37dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="48dp"
-        android:background="?android:selectableItemBackgroundBorderless"
-        android:padding="10dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_angle_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/black" />
+    tools:context=".ui.login.LoginActivity">
 
     <TextView
         android:id="@+id/hi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="4dp"
-        android:gravity="center"
         android:fontFamily="@font/origintech"
+        android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="39sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/navigate_up" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/hi_text"
@@ -164,51 +149,39 @@
         app:layout_constraintVertical_bias="0.142" />
 
     <LinearLayout
-        android:layout_width="185dp"
-        android:layout_height="48dp"
+        android:id="@+id/social_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/logicon_screen_style"
         android:gravity="center"
-        android:id="@+id/social_icons"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" Continue with"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <ImageView
             android:id="@+id/btn_google"
-            android:layout_width="43dp"
+            android:layout_width="33dp"
             android:layout_height="39dp"
             android:layout_margin="8dp"
             android:src="@mipmap/ic_google" />
 
-        <ImageView
-            android:id="@+id/btn_twitter"
-            android:layout_width="43dp"
-            android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:src="@mipmap/ic_twitter" />
-
-        <ImageView
-            android:id="@+id/btn_facebook"
-            android:layout_width="43dp"
-            android:layout_height="39dp"
-            android:layout_margin="8dp"
-            android:src="@mipmap/ic_facebook" />
-
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView_icons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:gravity="center"
-        android:text="@string/log_icons"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/social_icons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_test1"
-    tools:context=".ui.login.SignUpActivity"
-    android:id="@+id/signup_parent">
+    tools:context=".ui.login.SignUpActivity">
 
     <ImageButton
         android:id="@+id/navigate_up"
