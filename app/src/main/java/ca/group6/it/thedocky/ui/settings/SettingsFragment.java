@@ -20,8 +20,14 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import ca.group6.it.thedocky.SplashScrActivity;
+import ca.group6.it.thedocky.User;
 import ca.group6.it.thedocky.databinding.FragmentSettingsBinding;
 
 public class SettingsFragment extends Fragment {
@@ -52,6 +58,21 @@ public class SettingsFragment extends Fragment {
         });
 
 
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+        databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+
+                binding.usernameValueHome.setText(user.username);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //Change orientation
         binding.b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

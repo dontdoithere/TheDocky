@@ -156,7 +156,7 @@ public class ReviewFragment extends Fragment {
                             });
                 } else {
 
-                    Toast.makeText(getContext(), "Please add a star button is at thr left", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please add a star button is on the left", Toast.LENGTH_SHORT).show();
 
                 }
             }

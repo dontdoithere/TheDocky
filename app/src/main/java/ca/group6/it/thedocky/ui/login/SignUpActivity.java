@@ -118,7 +118,6 @@ public class SignUpActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     String txt_username = username.getText().toString().trim();
                     User user = new User(txt_username, email);
-
                     //Put our values into database
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
