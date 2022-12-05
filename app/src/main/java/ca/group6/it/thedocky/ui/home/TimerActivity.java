@@ -8,6 +8,8 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -49,6 +51,9 @@ public class TimerActivity extends AppCompatActivity {
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
     String city;
+
+
+    private static final String TAG = "TimerActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +97,13 @@ fetchLocation();
             @Override
             public void onClick(View view) {
 
-                balance -= 1 ;
+                int timePassed = (int) (SystemClock.elapsedRealtime() - binding.timer.getBase());
+
+                float price=  ( (timePassed/1000 )* 0.01f);
+
+                balance = balance - price ;
+                Log.d(TAG, "onClick: "+(SystemClock.elapsedRealtime() -binding.timer.getBase()  ));
+                Log.d(TAG, "onClick: "+price);
 
                 Map<String ,Object> map = new HashMap<>();
                 map.put("balance",balance);
@@ -108,7 +119,7 @@ fetchLocation();
 
 
                 String postId = String.valueOf(System.currentTimeMillis());
-                TransactionHistory transactionHistory = new TransactionHistory(4,format,city,postId);
+                TransactionHistory transactionHistory = new TransactionHistory(price,format,city,postId);
         FirebaseDatabase.getInstance().getReference("TransactionHistory")
                 .child(posterId).child(postId)
                 .setValue(transactionHistory).addOnCompleteListener(new OnCompleteListener<Void>() {

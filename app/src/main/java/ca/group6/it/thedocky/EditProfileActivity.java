@@ -41,7 +41,7 @@ public class EditProfileActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(this,"In progress...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditProfileActivity.this,"In progress...", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -56,8 +56,10 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private boolean isPasswordChanged() {
 
+        return false;
     }
 
     private boolean isNameChanged() {
+        return false;
     }
 }

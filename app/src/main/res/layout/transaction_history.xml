@@ -46,6 +46,7 @@
         android:textSize="25dp"
         android:layout_alignParentEnd="true"
         android:textStyle="bold"
+        android:maxLength="7"
         android:layout_centerVertical="true"
         android:textColor="#FF5722"
         android:layout_marginLeft="20dp"/>
