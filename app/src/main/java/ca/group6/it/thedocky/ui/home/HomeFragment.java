@@ -93,7 +93,6 @@ public class HomeFragment extends Fragment {
     }
 
     //Firebase db user data
-
     private void fetchLocation() {
         if (ActivityCompat.checkSelfPermission(
                 getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/i1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/bike1"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@id/i1"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#516b9e"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@id/i1"
+            android:layout_below="@+id/city"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16dp"
+            android:id="@+id/date"
+            android:textStyle="bold"
+            android:textColor="#516b9e"
+            android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="sans-serif-black"
+        android:textSize="25dp"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:textColor="#FF5722"
+        android:layout_marginLeft="20dp"/>
+
+</RelativeLayout>
