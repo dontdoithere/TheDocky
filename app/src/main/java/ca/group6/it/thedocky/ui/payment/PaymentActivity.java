@@ -45,7 +45,7 @@ public class PaymentActivity extends AppCompatActivity {
         mSupportedCardTypesView.setSupportedCardTypes(SUPPORTED_CARD_TYPES);
 
         cardForm = (CardForm) findViewById(R.id.card_form);
-        Button pay = findViewById(R.id.btnPay);
+        Button pay = findViewById(R.id.balance);
         back_btn = findViewById(R.id.navigate_up);
 
         View pay_t = findViewById(btnPay);

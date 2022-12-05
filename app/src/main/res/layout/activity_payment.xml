@@ -51,7 +51,7 @@
       android:text="@string/bt_save_card_checkbox_name" />
 
   <Button
-      android:id="@+id/btnPay"
+      android:id="@+id/balance"
       android:layout_width="275dp"
       android:layout_height="wrap_content"
       android:layout_marginStart="48dp"
@@ -59,7 +59,7 @@
       android:layout_marginEnd="40dp"
       android:layout_marginBottom="18dp"
       android:backgroundTint="@color/notification"
-      android:text="@string/pay_now"
+      android:text="PAY NOW"
       android:textColor="@android:color/white" />
 
 

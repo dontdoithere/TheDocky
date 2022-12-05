@@ -72,21 +72,7 @@ public class PaymentFragment extends Fragment {
         return view;
     }
 
-    public View oonCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_payment, container, false);
 
-        CardView transfer_id = cardView.findViewById(R.id.transfer_id);
-        transfer_id.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: Click");
-                startActivity(new Intent(getContext(), TransferActivity.class));
-            }
-        });
-
-        return v;
-    }
 }
 
 
