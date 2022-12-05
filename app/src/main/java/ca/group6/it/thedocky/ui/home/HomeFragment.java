@@ -69,6 +69,7 @@ public class HomeFragment extends Fragment {
                 User user = snapshot.getValue(User.class);
 
                binding.usernameValueHome.setText(user.username);
+               binding.balance.setText("$"+user.balance);
             }
 
             @Override

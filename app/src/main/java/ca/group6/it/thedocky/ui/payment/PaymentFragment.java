@@ -52,6 +52,7 @@ public class PaymentFragment extends Fragment {
         });
 
         TextView userName = view.findViewById(R.id.username);
+        TextView balacne = view.findViewById(R.id.balance);
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
@@ -60,6 +61,7 @@ public class PaymentFragment extends Fragment {
                 User user = snapshot.getValue(User.class);
 
                 userName.setText(user.username);
+                balacne.setText("$"+user.balance);
             }
 
             @Override

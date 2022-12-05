@@ -155,7 +155,7 @@ public class LoginActivity extends AppCompatActivity {
                                     String email = googleSignInAccount.getEmail();
                                     String name = googleSignInAccount.getDisplayName();
 
-                                    User user = new User(name, email);
+                                    User user = new User(name, email,"100");
                                     //Put our values into database
                                     FirebaseDatabase.getInstance().getReference("Users")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
