@@ -49,6 +49,12 @@
     <string name="Review">Review</string>
 
     <!--Maps-->
+    <!-- Settings-->
+    <string name="edit_profile_welcome">Welcome to Edit Profile!</string>
+    <string name="new_username">Enter new username</string>
+    <string name="new_email_address">Enter new email</string>
+    <string name="new_password">Enter new password</string>
+    <string name="update_btn">UPDATE</string>
     <!-- Header -->
     <!--Home-->
     <string name="home_username">Username:</string>

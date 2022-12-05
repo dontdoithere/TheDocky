@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_settings_test2"
+    tools:context=".EditProfileActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="332dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/settings_bg_layout"
+        android:orientation="vertical"
+        android:paddingLeft="17dp"
+        android:paddingTop="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProfUsername"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_back_white"
+            android:ems="10"
+            android:hint="@string/new_username"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="235dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProfEmail"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_back_white"
+            android:ems="10"
+            android:hint="@string/new_email_address"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="347dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProfPass"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_back_white"
+            android:ems="10"
+            android:hint="@string/new_password"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="101dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:src="@mipmap/ic_avatar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfileSettings"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/textViewProfileSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/origintech"
+        android:text="@string/edit_profile_welcome"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/update_btn"
+        android:background="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.315" />
+</androidx.constraintlayout.widget.ConstraintLayout>
