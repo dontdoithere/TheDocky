@@ -69,13 +69,13 @@
             android:textSize="25dp" />
 
         <TextView
+            android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:paddingLeft="40dp"
             android:paddingTop="50dp"
             android:text="$100.00"
-            android:id="@+id/balance"
             android:textColor="#fff"
             android:textSize="35dp"
             android:textStyle="bold" />
