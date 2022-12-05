@@ -72,12 +72,12 @@ public class TimerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                balance -=0.01;
+                balance -=1;
 
                 Map<String ,Object> map = new HashMap<>();
                 map.put("balance",balance);
                 databaseReference.updateChildren(map);
-                Toast.makeText(TimerActivity.this, "Docking finish payment withdraw from your balance", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TimerActivity.this, "Docking finished payment withdraw from your balance", Toast.LENGTH_SHORT).show();
                finish();
             }
         });

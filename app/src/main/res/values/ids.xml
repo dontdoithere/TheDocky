@@ -5,4 +5,5 @@
     <item name="nav_maps" type="id"  />
     <item name="nav_home" type="id"  />
     <item name="nav_login" type="id"  />
+
 </resources>

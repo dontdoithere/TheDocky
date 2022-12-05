@@ -5,6 +5,7 @@
 package ca.group6.it.thedocky.ui.settings;
 
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.app.AlertDialog;
@@ -42,7 +43,8 @@ public class SettingsFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
-    private AppCompatButton delete_acc;
+    private SwitchCompat delete_acc;
+    private SwitchCompat edit_noti;
     View view;
     private Button logout;
 
@@ -90,6 +92,11 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+
+
+
+
+
         //Delete user account
         binding.deleteAccaountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,7 +137,40 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        binding.editbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+                dialog.setTitle("Are you sure?");
+                dialog.setMessage("By clicking <Edit notifications> you agree that you will absolutely enable notifications .........");
+                dialog.setPositiveButton("Enable", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        binding.editbtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View task) {
+                                if(task.isShown()){
+                                    Toast.makeText(getActivity(), "Notification is enabled!", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(getActivity(), SettingsFragment.class);
 
+
+                                }
+                            }
+                        });
+                    }
+                });
+                dialog.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInt, int which) {
+                        dialogInt.dismiss();
+                    }
+                });
+                //Alert Dialog
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+        });
 
 
         //Change orientation

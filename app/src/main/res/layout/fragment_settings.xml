@@ -10,284 +10,284 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:src="@mipmap/ic_avatar_round"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="User name"
-            android:id="@+id/username_value_home"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold"/>
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="20dp"
-        android:layout_gravity="center"
-        android:background="@color/black"
-        android:text="Edit Profile"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:paddingEnd="20dp"/>
-
-       <LinearLayout
-           android:background="@color/purple_200"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="20dp"
-           android:layout_marginEnd="20dp"
-           android:layout_marginTop="40dp"
-           android:orientation="vertical"
-           android:padding="15dp">
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="10dp">
-
-              <ImageView
-                  android:layout_width="40dp"
-                  android:id="@+id/darkmodeicon"
-                  android:layout_height="40dp"
-                  android:src="@drawable/dark_mode_6682"
-                  android:background="@drawable/round_back_night_mode"
-                  android:padding="12dp"
-                  />
-
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="match_parent"
-                  android:layout_centerVertical="true"
-                  android:paddingStart="10dp"
-
-                  android:text="Night Mode"
-                  android:textColor="#FFFFFF"
-                  android:textStyle="bold"
-                  android:layout_toEndOf="@+id/darkmodeicon"/>
-              <androidx.appcompat.widget.SwitchCompat
-
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_alignParentEnd="true"
-                  android:layout_centerVertical="true"
-                  android:switchMinWidth="60dp"
-                  android:theme="@style/nightModeSwitch"/>
-
-          </RelativeLayout>
-
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:padding="10dp">
-
-               <ImageView
-                   android:layout_width="40dp"
-                   android:id="@+id/notificationicon"
-                   android:layout_height="40dp"
-                   android:src="@drawable/ic_notification"
-                   android:background="@drawable/round_back_notifications"
-                   android:padding="12dp"
-                   />
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="match_parent"
-                   android:layout_centerVertical="true"
-                   android:paddingStart="10dp"
-                   android:text="Notifications"
-                   android:textColor="#FFFFFF"
-                   android:textStyle="bold"
-                   android:layout_toEndOf="@+id/notificationicon"/>
-               <androidx.appcompat.widget.SwitchCompat
-
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentEnd="true"
-                   android:layout_centerVertical="true"
-                   android:switchMinWidth="50dp"
-                   android:theme="@style/notificationSwitch"/>
-
-           </RelativeLayout>
-
-
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:padding="10dp">
-
-               <ImageView
-                   android:layout_width="40dp"
-                   android:id="@+id/privateaccounticon"
-                   android:layout_height="40dp"
-                   android:src="@drawable/delete_user_icon"
-                   android:background="@drawable/round_back_private_account"
-                   android:padding="12dp"
-                   />
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="match_parent"
-                   android:layout_centerVertical="true"
-                   android:paddingStart="10dp"
-                   android:text="Delete Account"
-                   android:textColor="#FFFFFF"
-                   android:textStyle="bold"
-                   android:layout_toEndOf="@+id/privateaccounticon"/>
-               <androidx.appcompat.widget.AppCompatButton
-                   android:id="@+id/delete_accaount_btn"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentEnd="true"
-                   android:layout_centerVertical="true"
-                   android:switchMinWidth="50dp"
-                   android:theme="@style/privateaccountSwitch"/>
-
-           </RelativeLayout>
-       </LinearLayout>
 
         <LinearLayout
-            android:background="@color/purple_200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_avatar_round" />
+
+            <TextView
+                android:id="@+id/username_value_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="User name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/black"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Edit Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/purple_200"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/mobile_rotate_rotation_icon"
-                    android:background="@drawable/round_back_night_mode"
-                    android:padding="12dp"
-                    android:id="@+id/o"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_toEndOf="@+id/o"
-                    android:layout_marginTop="5dp"
-                    android:text="Change orientation"
-                    android:textColor="#FFFFFF"
-                    android:paddingLeft="10dp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.SwitchCompat
-
-                    android:id="@+id/b"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:switchMinWidth="50dp"
-                   />
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/darkmodeicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_night_mode"
+                        android:padding="12dp"
+                        android:src="@drawable/dark_mode_6682" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/darkmodeicon"
+
+                        android:paddingStart="10dp"
+                        android:text="Night Mode"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="60dp"
+                        android:theme="@style/nightModeSwitch" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/notificationicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_notifications"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_notification" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/notificationicon"
+                        android:paddingStart="10dp"
+                        android:text="Notifications"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/editbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/notificationSwitch" />
+
+                </RelativeLayout>
 
 
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
-            <RelativeLayout
+                    <ImageView
+                        android:id="@+id/privateaccounticon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_private_account"
+                        android:padding="12dp"
+                        android:src="@drawable/delete_user_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/privateaccounticon"
+                        android:paddingStart="10dp"
+                        android:text="Delete Account"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/delete_accaount_btn"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:switchMinWidth="2dp"
+                        android:theme="@style/privateaccountSwitch" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/purple_200"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:id="@+id/messageusicon"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_message"
-                    android:background="@drawable/round_back_notifications"
-                    android:padding="12dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingStart="10dp"
-                    android:layout_centerVertical="true"
-                    android:text="Send Us Message"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:layout_toEndOf="@+id/messageusicon"/>
-                <ImageView
-
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_arrow_right_24"/>
+                    android:padding="10dp">
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/o"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_night_mode"
+                        android:padding="12dp"
+                        android:src="@drawable/mobile_rotate_rotation_icon" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/o"
+                        android:paddingLeft="10dp"
+                        android:text="Change orientation"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:id="@+id/faqicon"
-                    android:layout_height="40dp"
-                    android:src="@drawable/faq_icon"
-                    android:background="@drawable/round_back_private_account"
-                    android:padding="12dp"
-                    />
+                    <androidx.appcompat.widget.SwitchCompat
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:paddingStart="10dp"
-                    android:text="FAQ'S"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:layout_toEndOf="@+id/faqicon"/>
-                <ImageView
+                        android:id="@+id/b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:switchMinWidth="50dp" />
 
-                    android:layout_width="wrap_content"
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_arrow_right_24"/>
+                    android:padding="10dp">
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/messageusicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_notifications"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/messageusicon"
+                        android:paddingStart="10dp"
+                        android:text="Send Us Message"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_arrow_right_24" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/faqicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_private_account"
+                        android:padding="12dp"
+                        android:src="@drawable/faq_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/faqicon"
+                        android:paddingStart="10dp"
+                        android:text="FAQ'S"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_arrow_right_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/bt_black"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="LogOut"
+                android:textColor="@color/bg_color3" />
+
 
         </LinearLayout>
-
-    <Button
-        android:id="@+id/logout_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="LogOut"
-        android:textColor="@color/bg_color3"
-        android:layout_gravity="center"
-        android:background="@color/bt_black"
-        />
-
-
-</LinearLayout>
     </ScrollView>
 </LinearLayout>
