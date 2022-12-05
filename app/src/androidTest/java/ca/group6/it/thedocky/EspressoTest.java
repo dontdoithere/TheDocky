@@ -34,14 +34,16 @@ public class EspressoTest {
         onView(withText("Forgot password")).check(isCompletelyBelow(withId(R.id.password_login)));
 
     }
-@Test
-    public void resetpasswordIsOpenedWhenClickedForgotPassword(){
+
+    @Test
+    public void resetpasswordIsOpenedWhenClickedForgotPassword() {
         onView(withId(R.id.forgot_password)).perform(click());
         onView(withId(R.id.activity_forget_password_parent)).check(matches(isDisplayed()));
 
         pressBack();
         onView(withId(R.id.activity_login_parent)).check(matches(isDisplayed()));
-}
+    }
+
     @Test
     public void signupIsDisplayedBelowlogin() {
         onView(withId(R.id.or)).check(matches(isDisplayed()));
@@ -50,7 +52,7 @@ public class EspressoTest {
     }
 
     @Test
-    public void signupIsOpenedWhenClickedSignup(){
+    public void signupIsOpenedWhenClickedSignup() {
         onView(withId(R.id.or)).perform(click());
         onView(withId(R.id.signup_parent)).check(matches(isDisplayed()));
 
@@ -58,6 +60,12 @@ public class EspressoTest {
         onView(withId(R.id.activity_login_parent)).check(matches(isDisplayed()));
     }
 
+    @Test
+    public void loginIsDisplayedBelowPass() {
+        onView(withId(R.id.login_button)).check(matches(isDisplayed()));
+        onView(withId(R.id.login_button)).check(isCompletelyBelow(withId(R.id.password_login)));
+
+    }
 }
 
 
