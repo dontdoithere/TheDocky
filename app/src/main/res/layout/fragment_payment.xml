@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
             android:paddingTop="30dp"
-            android:text="Total Balance"
+            android:text="Wallet Balance"
             android:textColor="#fff"
             android:textSize="25dp" />
 
@@ -74,7 +74,7 @@
             android:fontFamily="sans-serif-black"
             android:paddingLeft="40dp"
             android:paddingTop="50dp"
-            android:text="$0.00"
+            android:text="$100.00"
             android:id="@+id/balance"
             android:textColor="#fff"
             android:textSize="35dp"

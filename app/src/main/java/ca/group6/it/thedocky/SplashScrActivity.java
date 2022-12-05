@@ -28,10 +28,10 @@ public class SplashScrActivity extends AppCompatActivity {
             public void run() {
                 if (firebaseUser == null){
 
-                Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class); //SignUpActivity
+                Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class); //LoginActivity
                 startActivity(intent);
                 finish();}else {
-                    Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class); //SignUpActivity
+                    Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class);//LoginActivity
                     startActivity(intent);
                     finish();
                 }
