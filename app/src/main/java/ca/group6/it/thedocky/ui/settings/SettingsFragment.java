@@ -4,6 +4,7 @@
 //
 package ca.group6.it.thedocky.ui.settings;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.lifecycle.ViewModelProvider;
@@ -45,6 +46,7 @@ public class SettingsFragment extends Fragment {
 
     private SwitchCompat delete_acc;
     private SwitchCompat edit_noti;
+    private SwitchCompat night;
     View view;
     private Button logout;
 
@@ -58,7 +60,7 @@ public class SettingsFragment extends Fragment {
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
+//        night = view.findViewById(R.id.night);
        // delete_acc = view.findViewById(R.id.delete_accaount_btn);
 
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +94,18 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        binding.night.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(binding.night.isChecked()){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    Toast.makeText(getContext(), "Night Mode ON", Toast.LENGTH_SHORT).show();
+                }else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    Toast.makeText(getContext(), "Night Mode OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
 
@@ -137,6 +151,16 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        binding.editbtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(binding.editbtn.isChecked()){
+                    Toast.makeText(getContext(), "Notification is enabled!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(), "Notification is disabled!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         binding.editbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,6 +195,7 @@ public class SettingsFragment extends Fragment {
                 alertDialog.show();
             }
         });
+        
 
 
         //Change orientation
