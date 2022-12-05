@@ -4,8 +4,11 @@
 //
 package ca.group6.it.thedocky.ui.settings;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -19,19 +22,27 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import ca.group6.it.thedocky.R;
 import ca.group6.it.thedocky.SplashScrActivity;
 import ca.group6.it.thedocky.User;
 import ca.group6.it.thedocky.databinding.FragmentSettingsBinding;
 
 public class SettingsFragment extends Fragment {
 
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+
+    private AppCompatButton delete_acc;
     View view;
     private Button logout;
 
@@ -46,6 +57,7 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+       // delete_acc = view.findViewById(R.id.delete_accaount_btn);
 
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +68,10 @@ public class SettingsFragment extends Fragment {
                 getActivity().finish();
             }
         });
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
 
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
@@ -73,6 +89,49 @@ public class SettingsFragment extends Fragment {
 
             }
         });
+
+        //Delete user account
+        binding.deleteAccaountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+                dialog.setTitle("Are you sure?");
+                dialog.setMessage("By clicking <Delete Account> you agree that you will absolutely delete .........");
+                dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        firebaseUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(getActivity(), "Account was deleted!", Toast.LENGTH_LONG).show();
+
+                                    Intent intent = new Intent(getActivity(), SplashScrActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                    getActivity().finish();
+                                } else {
+                                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+                    }
+                });
+                dialog.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInt, int which) {
+                        dialogInt.dismiss();
+                    }
+                });
+                //Alert Dialog
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
+        });
+
+
+
 
         //Change orientation
         binding.b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

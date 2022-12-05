@@ -147,8 +147,8 @@
                    android:textColor="#FFFFFF"
                    android:textStyle="bold"
                    android:layout_toEndOf="@+id/privateaccounticon"/>
-               <androidx.appcompat.widget.SwitchCompat
-
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/delete_accaount_btn"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_alignParentEnd="true"
