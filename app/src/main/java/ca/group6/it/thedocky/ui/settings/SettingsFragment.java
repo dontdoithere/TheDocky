@@ -4,6 +4,9 @@
 //
 package ca.group6.it.thedocky.ui.settings;
 
+import static androidx.fragment.app.FragmentManager.TAG;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
@@ -17,6 +20,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,10 +38,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import ca.group6.it.thedocky.EditProfileActivity;
 import ca.group6.it.thedocky.R;
 import ca.group6.it.thedocky.SplashScrActivity;
 import ca.group6.it.thedocky.User;
 import ca.group6.it.thedocky.databinding.FragmentSettingsBinding;
+import ca.group6.it.thedocky.ui.payment.PaymentActivity;
 
 public class SettingsFragment extends Fragment {
 
@@ -61,7 +67,7 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 //        night = view.findViewById(R.id.night);
-       // delete_acc = view.findViewById(R.id.delete_accaount_btn);
+        // delete_acc = view.findViewById(R.id.delete_accaount_btn);
 
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +78,42 @@ public class SettingsFragment extends Fragment {
                 getActivity().finish();
             }
         });
+
+    
+
+
+
+            binding.editpro.setOnClickListener(new View.OnClickListener() {
+                View view = inflater.inflate(R.layout.fragment_settings, container, false);
+                View binding = view.findViewById(R.id.editpro);
+
+
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
+                }
+            });
+
+
+//    public View onCreateView(@NonNull LayoutInflater inflater,
+//                             ViewGroup container, Bundle savedInstanceState) {
+//        SettingsViewModel settingsViewModel =
+//                new ViewModelProvider(this).get(SettingsViewModel.class);
+//
+//        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+//        View root = binding.getRoot();
+////        night = view.findViewById(R.id.night);
+//       // delete_acc = view.findViewById(R.id.delete_accaount_btn);
+//
+//        binding.editpro.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FirebaseAuth.getInstance().signOut();
+//                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+//                startActivity(intent);
+//                getActivity().finish();
+//            }
+//        });
 
 
         firebaseAuth = FirebaseAuth.getInstance();
