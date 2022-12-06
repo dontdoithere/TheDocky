@@ -1,8 +1,10 @@
 package ca.group6.it.thedocky;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -41,6 +43,16 @@ public class EditProfileActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                builder.setTitle("Updating your profile details")
+                        .setMessage("Are you sure you want to update your profile information")
+                        .setPositiveButton("Yes",(DialogInterface.OnClickListener)(dialog, which) ->{
+                            Toast.makeText(EditProfileActivity.this, "Updated!", Toast.LENGTH_SHORT).show();                       })
+                        .setNegativeButton("No",(DialogInterface.OnClickListener)(dialog, which)->{
+                            dialog.cancel();
+                        });
+                AlertDialog alertDialog = builder.create();
+                //alertDialog.show();
                 Toast.makeText(EditProfileActivity.this,"In progress...", Toast.LENGTH_SHORT).show();
             }
         });
