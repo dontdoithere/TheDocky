@@ -68,8 +68,9 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
 
+                if ( binding != null){
                binding.usernameValueHome.setText(user.username);
-               binding.textView9.setText("$"+user.balance);
+               binding.textView9.setText("$"+user.balance);}
             }
 
             @Override

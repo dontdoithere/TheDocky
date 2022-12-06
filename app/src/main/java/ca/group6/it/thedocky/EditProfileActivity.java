@@ -10,14 +10,16 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditProfileActivity extends AppCompatActivity {
 
     TextInputEditText username;
-    TextInputEditText email;
-    TextInputEditText password;
 
     AppCompatButton update;
 
@@ -32,46 +34,32 @@ public class EditProfileActivity extends AppCompatActivity {
 
 
         //Database
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getUid());
 
         //Initialize text and button
         username = findViewById(R.id.editProfUsername);
-        email = findViewById(R.id.editProfEmail);
-        password = findViewById(R.id.editProfPass);
         update = findViewById(R.id.update_button);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                builder.setTitle("Updating your profile details")
-                        .setMessage("Are you sure you want to update your profile information")
-                        .setPositiveButton("Yes",(DialogInterface.OnClickListener)(dialog, which) ->{
-                            Toast.makeText(EditProfileActivity.this, "Updated!", Toast.LENGTH_SHORT).show();                       })
-                        .setNegativeButton("No",(DialogInterface.OnClickListener)(dialog, which)->{
-                            dialog.cancel();
-                        });
-                AlertDialog alertDialog = builder.create();
-                //alertDialog.show();
-                Toast.makeText(EditProfileActivity.this,"In progress...", Toast.LENGTH_SHORT).show();
+
+                            Map<String,Object> map = new HashMap<>();
+                            map.put("username",username.getText().toString());
+
+                            reference.updateChildren(map);
+
+                            Toast.makeText(EditProfileActivity.this, "Updated!", Toast.LENGTH_SHORT).show();
+            finish();
+
             }
+
+
         });
     }
 
 
-    public void updateInfo(View view){
-        if(isNameChanged() || isPasswordChanged ()){
-            Toast.makeText(this, "Data has been updated!", Toast.LENGTH_SHORT).show();
-            
-        }
-    }
 
-    private boolean isPasswordChanged() {
 
-        return false;
-    }
 
-    private boolean isNameChanged() {
-        return false;
-    }
 }

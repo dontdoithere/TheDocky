@@ -95,26 +95,6 @@ public class SettingsFragment extends Fragment {
             });
 
 
-//    public View onCreateView(@NonNull LayoutInflater inflater,
-//                             ViewGroup container, Bundle savedInstanceState) {
-//        SettingsViewModel settingsViewModel =
-//                new ViewModelProvider(this).get(SettingsViewModel.class);
-//
-//        binding = FragmentSettingsBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
-////        night = view.findViewById(R.id.night);
-//       // delete_acc = view.findViewById(R.id.delete_accaount_btn);
-//
-//        binding.editpro.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                FirebaseAuth.getInstance().signOut();
-//                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
-//            }
-//        });
-
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
