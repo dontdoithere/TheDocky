@@ -82,7 +82,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
                     currentLocation = location;
                     Toast.makeText(getActivity(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.g_map);
-                    assert supportMapFragment != null;
                     supportMapFragment.getMapAsync(MapsFragment.this);
                     Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
 

@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="85dp">
+            android:paddingLeft="145dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_pay_id"
@@ -123,37 +123,6 @@
             </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                app:cardBackgroundColor="#3fefef"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/wallet" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Receipts"
-                        android:textColor="#fff"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
         <LinearLayout
