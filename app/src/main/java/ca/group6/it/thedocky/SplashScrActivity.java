@@ -31,7 +31,7 @@ public class SplashScrActivity extends AppCompatActivity {
                 Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class); //LoginActivity
                 startActivity(intent);
                 finish();}else {
-                    Intent intent = new Intent(SplashScrActivity.this, LoginActivity.class);//LoginActivity
+                    Intent intent = new Intent(SplashScrActivity.this, MainActivity.class);//LoginActivity
                     startActivity(intent);
                     finish();
                 }
