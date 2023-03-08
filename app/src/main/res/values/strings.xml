@@ -59,6 +59,11 @@
     <!--Home-->
     <string name="home_username">Username:</string>
     <string name="home_balance">Balance:</string>
+    <string name="status_text">Status:</string>
+    <string name="data_field">Data:</string>
+    <string name="weight_sen">Weight Sensor:</string>
+    <string name="lcd_screen">LCD Screen:</string>
+    <string name="solenoid_sen">Solenoid Sensor:</string>
     <string name="switch_locker_state">Lock|Unlock</string>
     <string name="loc_bike">Location:</string>
     <string name="timer_descr">How much we charge?</string>
