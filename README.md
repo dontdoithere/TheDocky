@@ -3,13 +3,13 @@
 
 ## Table of contents:
 
- 1.  Introduction
- 2.  Features
- 3.  Hardware Requirements
- 4.  Software Requirements
- 5.  Getting Started
- 6.  Contributing
- 7.  License
+ ### 1.  Introduction
+ ### 2.  Features
+ ### 3.  Hardware Requirements
+ ### 4.  Software Requirements
+ ### 5.  Getting Started
+ ### 6.  Contributing
+ ### 7.  License
  
  
 ### Description:
