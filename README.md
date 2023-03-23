@@ -1,5 +1,10 @@
 # TheDocky
-## Members: Semen Dyakonov, Nissan Rayappu, Nathan Ryan, Binay Pawan Garlapati
+## Members:
+
+### 1. Semen Diakonov
+### 2. Nissan Rayappu 
+
+
 
 ## Table of contents:
 
@@ -11,7 +16,7 @@
  ### 6.  Contributing
  ### 7.  License
  
- ////////////////////////////////////////////////////////////////////
+
 ## Inroduction:
 
 TheDocky is a smart bike lock system designed to provide secure bike parking solutions at various locations, including homes, schools, shopping malls, and other public places. This innovative docking system is accompanied by an Android app that controls the locking mechanism, tracks parking duration, and enables billing when required.
