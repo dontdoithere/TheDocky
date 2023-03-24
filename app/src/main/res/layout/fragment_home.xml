@@ -216,21 +216,21 @@
                 android:text="@string/weight_sen" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/weight_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/lcdddd_name"
+                android:id="@+id/lcd_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/lcd_screen" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/lcd_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -244,7 +244,7 @@
                 android:text="@string/solenoid_sen" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/solenoid_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

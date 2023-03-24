@@ -50,7 +50,8 @@ public class HomeFragment extends Fragment {
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
-
+    private TextView weightData;
+    private TextView lcdData;
     double latitude;
     double longitude;
     private String userID;
@@ -62,7 +63,16 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
+        //Assign weight_data to variable
+        View view =binding.getRoot();
+        weightData = view.findViewById(R.id.weight_data);
+        lcdData = view.findViewById(R.id.lcd_data);
+
+
+        // Reference to user from Database
+
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+
         databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -78,6 +88,54 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        //Reference to LCD Screen information from Database
+        DatabaseReference lcdSensorRef = FirebaseDatabase.getInstance().getReference("LCD Screen");
+
+        lcdSensorRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()) {
+                    Object lcdObj = snapshot.child("LCD").child("lcd").getValue();
+                    if (lcdObj != null) {
+                        String lcd = lcdObj.toString();
+                        lcdData.setText(lcd);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
+        // Reference to Weight Sensor information from database
+        DatabaseReference weightSensorRef = FirebaseDatabase.getInstance().getReference("Weight Sensor");
+
+        weightSensorRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()) {
+                    Object weightObj = snapshot.child("Weight").child("Weight").getValue();
+                    if (weightObj != null) {
+                        String weight = weightObj.toString();
+                        weightData.setText(weight);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
         binding.starRideButton.setOnClickListener(new View.OnClickListener() {
             @Override
