@@ -36,6 +36,38 @@ TheDocky is a smart bike lock system designed to provide secure bike parking sol
    - Weight Sensor: Detects the weight of the bike and triggers notifications when an attempt to steal the bike is made.
    - Solenoid: Mechanism responsible for locking and unlocking the bike.
    - LCD Screen: Displays important information such as time and user details.
+   
+### 3.1 Hardware Development Platform Report/Build instructions
+
+   - We used Fritzing to create our PCB boards. The PCB is used to wire our sensors to the 40 GPIO pin connectors, and turn on our blinking light resistors. Each team member has their own wiring diagrams
+   
+### 2.1 Parts, Components, Materials 
+
+ Parts:
+
+-LCD 2-Inch screen.
+
+-12v Push/Pull Solenoid
+
+-20kg Weight Sensor
+
+-PCB (Attached to Pi 4B)
+
+-Arduino UNO R3
+
+Stepper Motor
+
+Plastic Chain
+
+Componants:
+
+-Using many electronic componants from out Semester 1 Tech Kit.
+
+-We used: wires, resistors, transistors and LED lights.
+
+-We have Female/Male wire connectors and long pins that attach sensors to the breadboard and PCB.
+
+
 
 ## Getting started 
 
