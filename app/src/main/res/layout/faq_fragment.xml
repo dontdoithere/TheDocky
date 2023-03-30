@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@drawable/bg_settings_test2"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,14 +17,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question1"
-            android:background="@drawable/rounded_bg"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/q1_ans"
+            android:textColor="@color/black"
             android:background="@drawable/rounded_bg"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
@@ -34,13 +38,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question2"
-            android:background="@drawable/rounded_bg"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
+            android:textColor="@color/black"
             android:text="@string/q2_ans"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
@@ -51,13 +59,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question3"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q3_ans"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
@@ -67,13 +80,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question4"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q4_ans"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
@@ -83,13 +101,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question5"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q5_ans"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
@@ -99,13 +122,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question6"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q6_ans"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
@@ -115,13 +143,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question7"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q7_ans"
+            android:textColor="@color/black"
             android:padding="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp" />
@@ -131,17 +164,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/question8"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:fontFamily="@font/molot"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/answer8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg"
             android:text="@string/q8_ans"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
-        <!-- Add similar TextView pairs for other questions and answers -->
+
 
     </LinearLayout>
 </ScrollView>
