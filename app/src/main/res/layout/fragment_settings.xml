@@ -232,7 +232,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-
+                        android:id="@+id/sendUsMesBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -265,7 +265,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-
+                        android:id="@+id/FAQbtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"

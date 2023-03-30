@@ -49,6 +49,32 @@
     <string name="Review">Review</string>
 
     <!--Maps-->
+    <!--FAQ-->
+
+    <string name="question1">What is TheDocky?</string>
+    <string name="q1_ans"> The Docky is a smart bike rack system that allows the users to park their bike at home, school, shopping malls, and any other public place that allows for bike access. This bike docking system comes with an app that controls the locking system and will let you know how long the user has parked their bike for. If the bike rack is located at a high traffic area, the property owners can add a payment system to the bike rack. Otherwise, the rack is free and is a first come, first serve system. When payments are required, they work similarly to a parking garage system where you pay for the time spent in a parking spot, the user will be billed hourly through the app after taking the bike off the rack. </string>
+
+    <string name="question2">What is Data ih Home fragment?</string>
+    <string name="q2_ans"> Data represents information from sensors and show it in your Home screen.  The main idea is that user can always take a look at their hardware information. </string>
+
+    <string name="question3">What is hardware used in this project?</string>
+    <string name="q3_ans"> We use 3 main components of our hardware: Weight Sensor - send and information about lock status. LCD Display - Display username data. Solenoid - stands for lock process of your bike</string>
+
+    <string name="question4">What is the "Dock" button?</string>
+    <string name="q4_ans">The "Dock" button move user to an dock screen which is responsible for solenoid activation. Also user can see all information about how long his bike in lock state and he can see rate for every second or minute of docking.</string>
+
+    <string name="question5">Can i change my username?</string>
+    <string name="q5_ans">Yes! Every user allowed to change his account credentials any time he wants. You can change you username, email and password in "Settings screen" by clicking "Edit" button. </string>
+
+    <string name="question6">When I login for first time I have 100$ on balance. What is it?</string>
+    <string name="q6_ans">Every user with registration gets and 100$ as bonus money for using our hardware. Also every user can put more money on his account by navigating to payment screen.</string>
+
+    <string name="question7">What is "Map" activity?</string>
+    <string name="q7_ans">Map activity is usewd to determine exact position of your hardware. So in case if your friend wants to use it, he can choose it from Map.</string>
+
+    <string name="question8">Can I delete my account?</string>
+    <string name="q8_ans">Yes! Evry user is allowed to delete his account. You can just navigate to Setting fragment and click "Delete Account" button.</string>
+
     <!-- Settings-->
     <string name="edit_profile_welcome">Welcome to Edit Profile!</string>
     <string name="new_username">Enter new username</string>
