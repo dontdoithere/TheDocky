@@ -76,6 +76,8 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         view = inflater.inflate(R.layout.fragment_settings, container, false);
 
+
+
         // Find the FAQbtn ImageButton
         FAQbtn = binding.getRoot().findViewById(R.id.FAQbtn);
             // Set an OnClickListener for the FAQbtn
@@ -89,6 +91,9 @@ public class SettingsFragment extends Fragment {
                 }
             });
         // delete_acc = view.findViewById(R.id.delete_accaount_btn);
+
+
+
 
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override

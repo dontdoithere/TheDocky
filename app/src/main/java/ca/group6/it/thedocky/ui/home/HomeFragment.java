@@ -39,6 +39,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+import ca.group6.it.thedocky.MoreInfo;
 import ca.group6.it.thedocky.R;
 import ca.group6.it.thedocky.User;
 import ca.group6.it.thedocky.databinding.FragmentHomeBinding;
@@ -53,7 +54,8 @@ public class HomeFragment extends Fragment {
     private static final int REQUEST_CODE = 101;
     private TextView weightData;
 
-    private Button moreInfo;
+    private Button moreInfoBtn;
+
     private TextView lcdData;
     double latitude;
     double longitude;
@@ -70,7 +72,7 @@ public class HomeFragment extends Fragment {
         View view =binding.getRoot();
         weightData = view.findViewById(R.id.weight_data);
         lcdData = view.findViewById(R.id.lcd_data);
-
+        moreInfoBtn = view.findViewById(R.id.more_info_btn);
 
         // Reference to user from Database
 
@@ -114,7 +116,14 @@ public class HomeFragment extends Fragment {
         });
 
 
-
+        // Set an OnClickListener for the moreInfoBtn
+        moreInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MoreInfo.class);
+                startActivity(intent);
+            }
+        });
 
         // Reference to Weight Sensor information from database
         DatabaseReference weightSensorRef = FirebaseDatabase.getInstance().getReference("Weight Sensor");
