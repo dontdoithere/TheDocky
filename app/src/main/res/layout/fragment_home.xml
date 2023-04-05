@@ -236,20 +236,8 @@
                 android:layout_marginTop="5dp"
                 android:text="TextView" />
 
-            <TextView
-                android:id="@+id/solenoid_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/solenoid_sen" />
+           
 
-            <TextView
-                android:id="@+id/solenoid_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-
-                android:text="TextView" />
         </LinearLayout>
 
 

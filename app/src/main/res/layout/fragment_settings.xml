@@ -264,7 +264,7 @@
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/FAQbtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
