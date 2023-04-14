@@ -23,6 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/aggresive"
+        android:shadowColor="#808080"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
         android:text="Weight Sensor"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -33,12 +37,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/weight_data"
-        android:layout_width="96dp"
-        android:layout_height="40dp"
+        android:id="@+id/weight_more_info"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/more_info_weight_value"
+        android:fontFamily="@font/aggresive"
+        android:padding="10dp"
+        android:paddingStart="20dp"
         android:text="100G"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -59,13 +67,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/weight_sen_descr_more_nfo"
         android:layout_width="329dp"
         android:layout_height="148dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:layout_marginTop="28dp"
+        android:text="@string/weight_descr"
+        android:textColor="@color/white"
+        android:textSize="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight_data" />
+        app:layout_constraintTop_toBottomOf="@+id/weight_more_info" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

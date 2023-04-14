@@ -107,6 +107,9 @@
     <string name="customerTextbox">Please Leave Your Feedback Here!</string>
 
 
+    <!-- More info -->
+    <string name="weight_descr">A weight sensor is a device that measures the weight or force applied to it. The purpose of a weight sensor is to provide accurate and precise measurements of weight or force, which is also used in our Android App!</string>
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
